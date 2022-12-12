@@ -16,5 +16,10 @@ global using global::Microsoft.Extensions.DependencyInjection;
 global using global::Microsoft.Extensions.Options;
 
 global using global::Microsoft.PowerPlatform.Dataverse.Client;
+global using global::Microsoft.PowerPlatform.Dataverse.Client.Model;
+
+global using global::Brimborium.Registrator;
+
+global using global::Brimborium.Werkzeugkasten.Library;
 
 

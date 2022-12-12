@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brimborium.Werkzeugkasten.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brimborium.Werkzeugkasten.Powershell", "Brimborium.Werkzeugkasten.Powershell\Brimborium.Werkzeugkasten.Powershell.csproj", "{01DD1DE1-0D3D-4E91-BFEB-0E4752BE39C4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{3F511EA2-5694-41B8-9A03-CC519D1E8DB5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brimborium.Registrator.Abstractions", "..\Brimborium.Net\Brimborium.Registrator\Brimborium.Registrator.Abstractions\Brimborium.Registrator.Abstractions.csproj", "{3D60B0A3-2BFD-470C-ABB6-0EFAA52EBC7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brimborium.Registrator", "..\Brimborium.Net\Brimborium.Registrator\Brimborium.Registrator\Brimborium.Registrator.csproj", "{2EE5D512-27C3-4DA5-AD74-5B08BC0AECD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brimborium.ReadMetadataWerkzeug", "Brimborium.ReadMetadataWerkzeug\Brimborium.ReadMetadataWerkzeug.csproj", "{3E9C1CD6-199B-498C-88C7-D0483025E009}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +35,25 @@ Global
 		{01DD1DE1-0D3D-4E91-BFEB-0E4752BE39C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01DD1DE1-0D3D-4E91-BFEB-0E4752BE39C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01DD1DE1-0D3D-4E91-BFEB-0E4752BE39C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D60B0A3-2BFD-470C-ABB6-0EFAA52EBC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D60B0A3-2BFD-470C-ABB6-0EFAA52EBC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D60B0A3-2BFD-470C-ABB6-0EFAA52EBC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D60B0A3-2BFD-470C-ABB6-0EFAA52EBC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE5D512-27C3-4DA5-AD74-5B08BC0AECD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE5D512-27C3-4DA5-AD74-5B08BC0AECD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE5D512-27C3-4DA5-AD74-5B08BC0AECD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE5D512-27C3-4DA5-AD74-5B08BC0AECD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9C1CD6-199B-498C-88C7-D0483025E009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9C1CD6-199B-498C-88C7-D0483025E009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9C1CD6-199B-498C-88C7-D0483025E009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9C1CD6-199B-498C-88C7-D0483025E009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D60B0A3-2BFD-470C-ABB6-0EFAA52EBC7F} = {3F511EA2-5694-41B8-9A03-CC519D1E8DB5}
+		{2EE5D512-27C3-4DA5-AD74-5B08BC0AECD1} = {3F511EA2-5694-41B8-9A03-CC519D1E8DB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {306DA146-7528-4719-909F-C713102A61A7}
