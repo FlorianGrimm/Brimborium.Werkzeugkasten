@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+		<UserSecretsId>Brimborium.Werkzeugkasten</UserSecretsId>
+
+	</PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Azure.Identity" Version="1.8.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+        <PackageReference Include="Microsoft.PowerPlatform.Dataverse.Client" Version="1.0.26" />
+
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Brimborium.Net\Brimborium.Registrator\Brimborium.Registrator.Abstractions\Brimborium.Registrator.Abstractions.csproj" />
+        <ProjectReference Include="..\..\Brimborium.Net\Brimborium.Registrator\Brimborium.Registrator\Brimborium.Registrator.csproj" />
+        <ProjectReference Include="..\Brimborium.Werkzeugkasten.Library\Brimborium.Werkzeugkasten.Library.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brimborium.Registrator.Abst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brimborium.Registrator", "..\Brimborium.Net\Brimborium.Registrator\Brimborium.Registrator\Brimborium.Registrator.csproj", "{2EE5D512-27C3-4DA5-AD74-5B08BC0AECD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brimborium.ReadMetadataWerkzeug", "Brimborium.ReadMetadataWerkzeug\Brimborium.ReadMetadataWerkzeug.csproj", "{3E9C1CD6-199B-498C-88C7-D0483025E009}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brimborium.ReadMetadataWerkzeug", "Brimborium.ReadMetadataWerkzeug\Brimborium.ReadMetadataWerkzeug.csproj", "{3E9C1CD6-199B-498C-88C7-D0483025E009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brimborium.WhoAmIWerkzeug", "Brimborium.WhoAmIWerkzeug\Brimborium.WhoAmIWerkzeug.csproj", "{5197BE22-39E7-465F-9418-D08923985BEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{3E9C1CD6-199B-498C-88C7-D0483025E009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E9C1CD6-199B-498C-88C7-D0483025E009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E9C1CD6-199B-498C-88C7-D0483025E009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5197BE22-39E7-465F-9418-D08923985BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5197BE22-39E7-465F-9418-D08923985BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5197BE22-39E7-465F-9418-D08923985BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5197BE22-39E7-465F-9418-D08923985BEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

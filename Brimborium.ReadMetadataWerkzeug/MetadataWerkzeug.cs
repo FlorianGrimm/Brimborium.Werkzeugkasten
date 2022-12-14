@@ -6,23 +6,29 @@ public class MetadataWerkzeugArguments : BaseWerkzeugArguments {
     //public ConfigurationFileWerkzeugActions? Action { get; set; }
 }
 
+[Transient()]
 public class MetadataWerkzeug : IWerkzeug {
-    public MetadataWerkzeug() {
+    private readonly IConfigurationRoot _Configuration;
+
+    public MetadataWerkzeug(
+        IConfigurationRoot configuration
+        ) {
+        this._Configuration = configuration;
     }
 
-    public async Task<int> ExecuteAsync(WerkzeugContext context) {
+    public async Task<int> ExecuteAsync() {
         var args = new MetadataWerkzeugArguments();
-        
-        return await this.ExecuteReadAsync(args, context);
+        this._Configuration.Bind(args);
+        return await this.ExecuteReadAsync(args);
     }
 
-    private async Task<int> ExecuteReadAsync(MetadataWerkzeugArguments args, WerkzeugContext context) {
-        var connectionString = BaseWerkzeugArgumentsUtility.GetConnectionString(context.Confinguration, args);
+    public async Task<int> ExecuteReadAsync(MetadataWerkzeugArguments args) {
+        var connectionString = BaseWerkzeugArgumentsUtility.GetConnectionString(this._Configuration, args);
         if (string.IsNullOrEmpty(connectionString)) { throw new ArgumentException($"ConnectionString:{args.ConnectionName} not found."); }
         await Task.Delay(1);
 
         using var serviceClient = new ServiceClient(connectionString);
-        WhoAmIResponse resp = (WhoAmIResponse)serviceClient.Execute(new WhoAmIRequest());
+        var resp = (WhoAmIResponse) await serviceClient.ExecuteAsync(new WhoAmIRequest());
         Console.WriteLine("User ID is {0}.", resp.UserId);
         return 0;
     }

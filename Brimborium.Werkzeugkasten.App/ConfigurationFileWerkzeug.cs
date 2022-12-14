@@ -9,40 +9,45 @@ public class ConfigurationWerkzeugArguments : BaseWerkzeugArguments {
 
 public class ConfigurationFileWerkzeug : IWerkzeug {
     private readonly ConnectionOptions _ConnectionOptions;
+    private readonly IConfigurationRoot _Configuration;
 
-    public ConfigurationFileWerkzeug(IOptions<ConnectionOptions> connectionOptions) {
+    public ConfigurationFileWerkzeug(
+        IConfigurationRoot configuration,
+        IOptions<ConnectionOptions> connectionOptions
+        ) {
         this._ConnectionOptions = connectionOptions.Value;
+        this._Configuration = configuration;
     }
 
-    public async Task<int> ExecuteAsync(WerkzeugContext context) {
+    public async Task<int> ExecuteAsync() {
         var args = new ConfigurationWerkzeugArguments();
-        context.Confinguration.Bind(args);
+        this._Configuration.Bind(args);
         if (!args.Action.HasValue) {
             System.Console.Error.WriteLine("--action required. Add | Remove | Show");
             return -1;
         } else if (args.Action.Value == ConfigurationFileWerkzeugActions.Add) {
-            return await this.ExecuteAddAsync(args, context);
+            return await this.ExecuteAddAsync(args);
         } else if (args.Action.Value == ConfigurationFileWerkzeugActions.Remove) {
-            return await this.ExecuteRemoveAsync(args, context);
+            return await this.ExecuteRemoveAsync(args);
         } else if (args.Action.Value == ConfigurationFileWerkzeugActions.Show) {
-            return await this.ExecuteShowAsync(args, context);
+            return await this.ExecuteShowAsync(args);
         } else { 
             System.Console.Error.WriteLine($"--action '{args.Action}' unknown. Add | Remove | Show");
             return -1;
         }
     }
 
-    public async Task<int> ExecuteAddAsync(ConfigurationWerkzeugArguments args, WerkzeugContext context) {
+    public async Task<int> ExecuteAddAsync(ConfigurationWerkzeugArguments args) {
         await Task.Delay(1);
         return -1;
     }
 
-    public async Task<int> ExecuteRemoveAsync(ConfigurationWerkzeugArguments args, WerkzeugContext context) {
+    public async Task<int> ExecuteRemoveAsync(ConfigurationWerkzeugArguments args) {
         await Task.Delay(1);
         return -1;
     }
 
-    public async Task<int> ExecuteShowAsync(ConfigurationWerkzeugArguments args, WerkzeugContext context) {
+    public async Task<int> ExecuteShowAsync(ConfigurationWerkzeugArguments args) {
         await Task.Delay(1);
         return -1;
     }

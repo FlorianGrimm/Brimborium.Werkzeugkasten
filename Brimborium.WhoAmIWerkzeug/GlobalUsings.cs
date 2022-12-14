@@ -7,11 +7,16 @@ global using global::System.Net.Http;
 global using global::System.Threading;
 global using global::System.Threading.Tasks;
 
-global using global::Brimborium.Registrator;
-
 global using global::Microsoft.Extensions.Configuration;
 global using global::Microsoft.Extensions.DependencyInjection;
 global using global::Microsoft.Extensions.Options;
-global using global::Microsoft.Extensions.Primitives;
+
 global using global::Microsoft.PowerPlatform.Dataverse.Client;
 global using global::Microsoft.PowerPlatform.Dataverse.Client.Model;
+global using global::Microsoft.Crm.Sdk.Messages;
+
+global using global::Brimborium.Registrator;
+
+global using global::Brimborium.Werkzeugkasten.Library;
+
+

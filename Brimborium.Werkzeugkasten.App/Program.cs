@@ -2,23 +2,41 @@
 
 public static class Program {
     public static async Task<int> Main(string[] args) {
-        var configurationBuilder = new ConfigurationBuilder();
-        configurationBuilder.AddEnvironmentVariables();
-        configurationBuilder.AddCommandLine(args);
-        var configuration = DataverseConnectionSourceUtility.Resolve(configurationBuilder);
-        var baseWerkzeugArguments = new BaseWerkzeugArguments();
-        configuration.Bind(baseWerkzeugArguments);
-        var connectionString = configuration.GetConnectionString(baseWerkzeugArguments.ConnectionName);
+        var bootApp = new BootApp(args);
+        var configuration = bootApp.BuildConfiguration();
 
-        var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
-        services.AddSingleton<IConfigurationRoot>(configuration);
-        services.AddOptions();
-
+        // WEICHEI?
+        // var baseWerkzeugArguments = new BaseWerkzeugArguments();
+        // configuration.Bind(baseWerkzeugArguments);
+        // var connectionString = configuration.GetConnectionString(baseWerkzeugArguments.ConnectionName);
         // _ = services.AddOptions<ConnectionOptions>().Configure(confinguration.Bind);
-        // TODO Load
+
+        LoadAssemblies();
+
+        bootApp.Services.AddServicesWithRegistrator(null, null);
+
+        var appServices = bootApp.BuildServiceProvider();
+        var (werkzeug, errorMessage) = GetWerkzeug(configuration, appServices);
+        if (errorMessage is not null) {
+            System.Console.Error.WriteLine(errorMessage);
+            return -1;
+        }
+        if (werkzeug is null) {
+            System.Console.Error.WriteLine("No werkzeug found.");
+            return -1;
+        }
+        try {
+            return await werkzeug.ExecuteAsync();
+        } catch (Exception error) {
+            System.Console.Error.WriteLine(error.ToString());
+            return -1;
+        }
+    }
+
+    private static void LoadAssemblies() {
         var location = typeof(Program).Assembly.Location;
-        System.IO.DirectoryInfo? d = new System.IO.FileInfo(location).Directory;
-        System.IO.DirectoryInfo? dirWerkzeug = default;
+        DirectoryInfo? d = new FileInfo(location).Directory;
+        DirectoryInfo? dirWerkzeug = default;
         while (d is not null && dirWerkzeug is null) {
             dirWerkzeug = d.EnumerateDirectories().FirstOrDefault(sd => sd.Name == "Werkzeug");
             d = d.Parent;
@@ -33,41 +51,29 @@ public static class Program {
                 }
             }
         }
-        services.AddServicesWithRegistrator(null, null);
-        var appServices = services.BuildServiceProvider();
+    }
 
+    private static (IWerkzeug? plugin, string? errorMessage) GetWerkzeug(IConfigurationRoot configuration, ServiceProvider appServices) {
         var valuePlugin = configuration.GetValue<string>("plugin");
         if (string.IsNullOrEmpty(valuePlugin)) {
-            System.Console.Error.WriteLine($"--plugin '' is empty.");
-            return -1;
+            return(null, $"--plugin '' is empty.");
         }
         var allPlugins = appServices.GetServices<IWerkzeug>();
         var pluginName = $"{valuePlugin}Werkzeug";
         var pluginsWithName = allPlugins.Where(plugin => plugin.GetType().Name == pluginName).ToList();
         if (pluginsWithName.Count == 0) {
-            System.Console.Error.WriteLine($"--plugin '{pluginName}' not found");
-            return -1;
+            return (null, $"--plugin '{pluginName}' not found");
+            
         }
         if (pluginsWithName.Count > 1) {
-            System.Console.Error.WriteLine($"--plugin '{pluginName}' found {pluginsWithName.Count} times.");
+            var sb = new StringBuilder();
+            sb.AppendLine($"--plugin '{pluginName}' found {pluginsWithName.Count} times.");
             foreach (var plugin in pluginsWithName) {
-                System.Console.Error.WriteLine($"pluging {plugin.GetType().AssemblyQualifiedName}");
+                sb.AppendLine($"pluging {plugin.GetType().AssemblyQualifiedName}");
             }
-            return -1;
+            return (null, sb.ToString());
         }
-
-        try {
-            var context = new WerkzeugContext(
-                configurationBuilder,
-                configuration,
-                services,
-                appServices
-                );
-            var werkzeug = pluginsWithName[0];
-            return await werkzeug.ExecuteAsync(context);
-        } catch (Exception error) {
-            System.Console.Error.WriteLine(error.ToString());
-            return -1;
-        }
+        var werkzeug = pluginsWithName.FirstOrDefault();
+        return (werkzeug, null);
     }
 }
