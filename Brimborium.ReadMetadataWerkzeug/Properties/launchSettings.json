@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Brimborium.ReadMetadataWerkzeug": {
+      "commandName": "Project",
+      "commandLineArgs": "--Input C:\\github.com\\FlorianGrimm\\Brimborium.Werkzeugkasten\\Temp\\ReadMetaData-Input.json --Output C:\\github.com\\FlorianGrimm\\Brimborium.Werkzeugkasten\\Temp\\ReadMetaData-Output.json"
+    }
+  }
+}

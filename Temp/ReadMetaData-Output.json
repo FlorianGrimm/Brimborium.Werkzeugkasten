@@ -1,0 +1,265 @@
+{
+  "EntityMetadata": [
+    {
+      "ActivityTypeMask": 0,
+      "Attributes": null,
+      "AutoRouteToOwnerQueue": false,
+      "CanTriggerWorkflow": true,
+      "Description": {
+        "LocalizedLabels": [
+          {
+            "Label": "Business that represents a customer or potential customer. The company that is billed in business transactions.",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "294901bf-2241-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "Business that represents a customer or potential customer. The company that is billed in business transactions.",
+          "LanguageCode": 1033,
+          "IsManaged": true,
+          "MetadataId": "294901bf-2241-db11-898a-0007e9e17ebd",
+          "HasChanged": null
+        }
+      },
+      "DisplayCollectionName": {
+        "LocalizedLabels": [
+          {
+            "Label": "Accounts",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "2b4901bf-2241-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "Accounts",
+          "LanguageCode": 1033,
+          "IsManaged": true,
+          "MetadataId": "2b4901bf-2241-db11-898a-0007e9e17ebd",
+          "HasChanged": null
+        }
+      },
+      "DisplayName": {
+        "LocalizedLabels": [
+          {
+            "Label": "Account",
+            "LanguageCode": 1033,
+            "IsManaged": true,
+            "MetadataId": "2a4901bf-2241-db11-898a-0007e9e17ebd",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "Account",
+          "LanguageCode": 1033,
+          "IsManaged": true,
+          "MetadataId": "2a4901bf-2241-db11-898a-0007e9e17ebd",
+          "HasChanged": null
+        }
+      },
+      "IsDocumentManagementEnabled": true,
+      "IsOneNoteIntegrationEnabled": true,
+      "IsInteractionCentricEnabled": true,
+      "IsKnowledgeManagementEnabled": false,
+      "IsDocumentRecommendationsEnabled": false,
+      "IsMSTeamsIntegrationEnabled": false,
+      "SettingOf": null,
+      "DataProviderId": null,
+      "DataSourceId": null,
+      "AutoCreateAccessTeams": false,
+      "IsActivity": false,
+      "IsActivityParty": true,
+      "IsAuditEnabled": {
+        "Value": false,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyauditsettings"
+      },
+      "IsRetrieveAuditEnabled": false,
+      "IsRetrieveMultipleAuditEnabled": false,
+      "IsArchivalEnabled": false,
+      "IsAvailableOffline": true,
+      "IsChildEntity": false,
+      "IsAIRUpdated": true,
+      "IsValidForQueue": {
+        "Value": false,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyqueuesettings"
+      },
+      "IsConnectionsEnabled": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyconnectionsettings"
+      },
+      "IconLargeName": null,
+      "IconMediumName": null,
+      "IconSmallName": null,
+      "IconVectorName": null,
+      "IsCustomEntity": false,
+      "IsBusinessProcessEnabled": true,
+      "IsCustomizable": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "iscustomizable"
+      },
+      "IsRenameable": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "isrenameable"
+      },
+      "IsMappable": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "ismappable"
+      },
+      "IsDuplicateDetectionEnabled": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings"
+      },
+      "CanCreateAttributes": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "cancreateattributes"
+      },
+      "CanCreateForms": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "cancreateforms"
+      },
+      "CanCreateViews": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "cancreateviews"
+      },
+      "CanCreateCharts": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "cancreatecharts"
+      },
+      "CanBeRelatedEntityInRelationship": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "canberelatedentityinrelationship"
+      },
+      "CanBePrimaryEntityInRelationship": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship"
+      },
+      "CanBeInManyToMany": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "canbeinmanytomany"
+      },
+      "CanBeInCustomEntityAssociation": {
+        "Value": true,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "canbeincustomentityassociation"
+      },
+      "CanEnableSyncToExternalSearchIndex": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex"
+      },
+      "SyncToExternalSearchIndex": true,
+      "CanModifyAdditionalSettings": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+      },
+      "ChangeTrackingEnabled": true,
+      "CanChangeTrackingBeEnabled": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canchangetrackingbeenabled"
+      },
+      "IsImportable": true,
+      "IsIntersect": false,
+      "IsMailMergeEnabled": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifymailmergesettings"
+      },
+      "IsManaged": true,
+      "IsEnabledForCharts": true,
+      "IsEnabledForTrace": false,
+      "IsValidForAdvancedFind": true,
+      "IsVisibleInMobile": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifymobilevisibility"
+      },
+      "IsVisibleInMobileClient": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifymobileclientvisibility"
+      },
+      "IsReadOnlyInMobileClient": {
+        "Value": false,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifymobileclientreadonly"
+      },
+      "IsReadingPaneEnabled": true,
+      "IsQuickCreateEnabled": true,
+      "LogicalName": "account",
+      "ManyToManyRelationships": null,
+      "ManyToOneRelationships": null,
+      "OneToManyRelationships": null,
+      "ObjectTypeCode": 1,
+      "OwnershipType": 1,
+      "PrimaryNameAttribute": "name",
+      "PrimaryIdAttribute": "accountid",
+      "Privileges": null,
+      "RecurrenceBaseEntityLogicalName": null,
+      "ReportViewName": "FilteredAccount",
+      "SchemaName": "Account",
+      "IsStateModelAware": false,
+      "EnforceStateTransitions": false,
+      "ExternalName": null,
+      "UsesBusinessDataLabelTable": false,
+      "HasNotes": true,
+      "HasActivities": true,
+      "HasFeedback": false,
+      "IsSolutionAware": false,
+      "Settings": null,
+      "CreatedOn": "1900-01-01T00:00:00",
+      "ModifiedOn": "1900-01-01T00:00:00",
+      "HasEmailAddresses": true,
+      "OwnerId": null,
+      "OwnerIdType": 8,
+      "OwningBusinessUnit": null,
+      "MetadataId": "70816501-edb9-4740-a16c-6a5efbc05d84",
+      "PrimaryImageAttribute": "entityimage",
+      "IntroducedVersion": "5.0.0.0",
+      "HasChanged": null,
+      "EntityHelpUrlEnabled": false,
+      "EntityHelpUrl": null,
+      "CanChangeHierarchicalRelationship": {
+        "Value": false,
+        "CanBeChanged": false,
+        "ManagedPropertyLogicalName": "canchangehierarchicalrelationship"
+      },
+      "IsOptimisticConcurrencyEnabled": true,
+      "EntityColor": "#794300",
+      "Keys": null,
+      "LogicalCollectionName": "accounts",
+      "ExternalCollectionName": null,
+      "CollectionSchemaName": "Accounts",
+      "IsOfflineInMobileClient": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifymobileclientoffline"
+      },
+      "DaysSinceRecordLastModified": 0,
+      "EntitySetName": "accounts",
+      "IsEnabledForExternalChannels": true,
+      "IsPrivate": false,
+      "IsSLAEnabled": false,
+      "MobileOfflineFilters": "\n\t\t<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">\n\t\t\t<entity name=\"account\">\n\t\t\t\t<filter type=\"and\">\n\t\t\t\t\t<condition attribute=\"modifiedon\" operator=\"last-x-days\" value=\"10\"/>\n\t\t\t\t</filter>\n\t\t\t</entity>\n\t\t</fetch>\n\t",
+      "IsBPFEntity": false,
+      "IsLogicalEntity": false
+    }
+  ]
+}

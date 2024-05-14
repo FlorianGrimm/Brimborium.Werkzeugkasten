@@ -25,9 +25,6 @@ public class GetWhoAmIWerkzeug : IWerkzeug {
     public async Task<int> ExecuteReadAsync(GetWhoAmIWerkzeugArguments args) {
         var connectionString = BaseWerkzeugArgumentsUtility.GetConnectionString(this._Configuration, args);
         if (string.IsNullOrEmpty(connectionString)) { throw new ArgumentException($"ConnectionString:{args.ConnectionName} not found."); }
-        System.Console.Out.WriteLine(
-            connectionString
-            );
 
         try {
             using var serviceClient = new ServiceClient(connectionString);
