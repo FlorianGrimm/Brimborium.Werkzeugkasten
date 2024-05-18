@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Brimborium.Werkzeugkasten.App": {
-      "commandName": "Project",
-      "hotReloadEnabled": false
-    }
-  }
-}

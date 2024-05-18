@@ -1,7 +1,0 @@
-﻿```JSON
-{
-  "ConnectionStrings": {
-    "default": "AuthType=OAuth;Url=https://myorg.crm.dynamics.com;Username=someone@myorg.onmicrosoft.com;RedirectUri=http://localhost;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;LoginPrompt=Auto"
-  }
-}
-```
