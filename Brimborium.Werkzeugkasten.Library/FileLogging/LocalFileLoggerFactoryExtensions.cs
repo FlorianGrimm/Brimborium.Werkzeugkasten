@@ -1,22 +1,41 @@
 ﻿namespace Brimborium.Werkzeugkasten.FileLogging;
 
 public static class LocalFileLoggerFactoryExtensions {
+    public static ILoggingBuilder AddLocalFileLoggerAll(
+        this ILoggingBuilder builder,
+        IConfiguration? configuration = null) {
+        return builder
+            .AddLocalFileLogger(configuration)
+            .AddLocalFileLogger1(configuration)
+            .AddLocalFileLogger2(configuration)
+            .AddLocalFileLogger3(configuration)
+            ;
+    }
     public static ILoggingBuilder AddLocalFileLogger(
         this ILoggingBuilder builder,
         IConfiguration? configuration = null) {
-        //
-        AddLocalFileLoggerInternal<LocalFileLoggerProvider, LocalFileLoggerOptions, LocalFileLoggerConfigureOptions>(
+        return AddLocalFileLoggerInternal<LocalFileLoggerProvider, LocalFileLoggerOptions, LocalFileLoggerConfigureOptions>(
             builder, configuration, "Logging:LocalFile", (IConfiguration configuration) => new LocalFileLoggerConfigureOptions(configuration));
-        AddLocalFileLoggerInternal<LocalFile1LoggerProvider, LocalFile1LoggerOptions, LocalFile1LoggerConfigureOptions>(
-            builder, configuration, "Logging:LocalFile1", (IConfiguration configuration) => new LocalFile1LoggerConfigureOptions(configuration));
-        AddLocalFileLoggerInternal<LocalFile2LoggerProvider, LocalFile2LoggerOptions, LocalFile2LoggerConfigureOptions>(
-            builder, configuration, "Logging:LocalFile2", (IConfiguration configuration) => new LocalFile2LoggerConfigureOptions(configuration));
-        AddLocalFileLoggerInternal<LocalFile3LoggerProvider, LocalFile3LoggerOptions, LocalFile3LoggerConfigureOptions>(
-            builder, configuration, "Logging:LocalFile3", (IConfiguration configuration) => new LocalFile3LoggerConfigureOptions(configuration));
-        //
-        return builder;
     }
-    private static void AddLocalFileLoggerInternal<TLocalFileLoggerProvider, TLocalFileLoggerOptions, TLocalFileLoggerConfigureOptions>(
+    public static ILoggingBuilder AddLocalFileLogger1(
+        this ILoggingBuilder builder,
+        IConfiguration? configuration = null) {
+        return AddLocalFileLoggerInternal<LocalFile1LoggerProvider, LocalFile1LoggerOptions, LocalFile1LoggerConfigureOptions>(
+            builder, configuration, "Logging:LocalFile1", (IConfiguration configuration) => new LocalFile1LoggerConfigureOptions(configuration));
+    }
+    public static ILoggingBuilder AddLocalFileLogger2(
+        this ILoggingBuilder builder,
+        IConfiguration? configuration = null) {
+        return AddLocalFileLoggerInternal<LocalFile2LoggerProvider, LocalFile2LoggerOptions, LocalFile2LoggerConfigureOptions>(
+            builder, configuration, "Logging:LocalFile2", (IConfiguration configuration) => new LocalFile2LoggerConfigureOptions(configuration));
+    }
+    public static ILoggingBuilder AddLocalFileLogger3(
+        this ILoggingBuilder builder,
+        IConfiguration? configuration = null) {
+        return AddLocalFileLoggerInternal<LocalFile3LoggerProvider, LocalFile3LoggerOptions, LocalFile3LoggerConfigureOptions>(
+            builder, configuration, "Logging:LocalFile3", (IConfiguration configuration) => new LocalFile3LoggerConfigureOptions(configuration));
+    }
+    private static ILoggingBuilder AddLocalFileLoggerInternal<TLocalFileLoggerProvider, TLocalFileLoggerOptions, TLocalFileLoggerConfigureOptions>(
         ILoggingBuilder builder,
         IConfiguration? configuration,
         string sectionKey,
@@ -47,5 +66,6 @@ public static class LocalFileLoggerFactoryExtensions {
                 new ConfigurationChangeTokenSource<TLocalFileLoggerOptions>(configuration));
             LoggerProviderOptions.RegisterProviderOptions<TLocalFileLoggerOptions, TLocalFileLoggerProvider>(builder.Services);
         }
+        return builder;
     }
 }

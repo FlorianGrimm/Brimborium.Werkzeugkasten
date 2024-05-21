@@ -2,6 +2,7 @@
     internal class Program {
         static void Main(string[] args) {
             var dependencyContext = Microsoft.Extensions.DependencyModel.DependencyContext.Default;
+            if (dependencyContext is null) { return; }
             var runtimeLibraries = dependencyContext.RuntimeLibraries;
             foreach (var runtimeLibrary in runtimeLibraries) {
                 if (string.Equals(runtimeLibrary.Name, "Brimborium.Werkzeugkasten.Powershell.VersionUtility", StringComparison.Ordinal)) {
