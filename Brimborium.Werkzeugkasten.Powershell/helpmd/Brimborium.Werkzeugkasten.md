@@ -11,6 +11,9 @@ Locale: en-US
 Toolbox for Dataverse
 
 ## Brimborium.Werkzeugkasten Cmdlets
-### [New-WKAppHost](New-WKAppHost.md)
-Creates a new instance of the WKAppHost, which contains configuration for logging.
+### [Get-WKLogger](Get-WKLogger.md)
+Get a [Brimborium.Werkzeugkasten.WKLogger]
+
+### [New-WKPSAppHost](New-WKPSAppHost.md)
+Creates a new instance of the WKPSAppHost, which contains configuration for logging.
 

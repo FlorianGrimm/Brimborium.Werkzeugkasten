@@ -5,29 +5,29 @@ online version:
 schema: 2.0.0
 ---
 
-# New-WKAppHost
+# New-WKPSAppHost
 
 ## SYNOPSIS
-Creates a new instance of the WKAppHost, which contains configuration for logging.
+Creates a new instance of the WKPSAppHost, which contains configuration for logging.
 
 ## SYNTAX
 
 ```
-New-WKAppHost [[-ApplicationName] <String>] [[-ContentRootPath] <String>] [[-AppSettingsJsonPath] <String>]
+New-WKPSAppHost [[-ApplicationName] <String>] [[-ContentRootPath] <String>] [[-AppSettingsJsonPath] <String>]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a new instance of the WKAppHost, which contains configuration for logging.
+Creates a new instance of the WKPSAppHost, which contains configuration for logging.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $AppHost = New-WKAppHost -ApplicationName 'MyPowershell' -AppSettingsJsonPath 'appsettings.json'
+PS C:\> $AppHost = New-WKPSAppHost -ApplicationName 'MyPowershell' -AppSettingsJsonPath 'appsettings.json'
 ```
 
-Creates a new instance of the WKAppHost with the specified application name and appsettings.json path.
+Creates a new instance of the WKPSAppHost with the specified application name and appsettings.json path.
 
 ## PARAMETERS
 
@@ -47,7 +47,8 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettingsJsonPath
-Loads the configuration from the specified appsettings.json file.
+Loads the configuration from the specified appsettings.json file. -AppSettingsJsonPath is optional. If not set, the appsettings.json file in the ContentRootPath is used.
+if the file exists the configuration "Host" is used to configure the host.
 
 ```yaml
 Type: String
@@ -99,7 +100,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 ## OUTPUTS
 
-### Brimborium.Werkzeugkasten.WKAppHost
+### Brimborium.Werkzeugkasten.WKPSAppHost
 ## NOTES
 
 ## RELATED LINKS

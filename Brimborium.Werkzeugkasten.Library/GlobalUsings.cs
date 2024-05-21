@@ -36,3 +36,11 @@ global using System.Text.Json;
 global using System.Text.Json.Serialization;
 global using System.Threading.Tasks;
 global using Brimborium.Werkzeugkasten;
+global using Brimborium.Werkzeugkasten.FileLogging;
+global using OpenTelemetry;
+global using OpenTelemetry.Exporter;
+global using OpenTelemetry.Logs;
+global using OpenTelemetry.Metrics;
+global using OpenTelemetry.Resources;
+global using OpenTelemetry.Trace;
+

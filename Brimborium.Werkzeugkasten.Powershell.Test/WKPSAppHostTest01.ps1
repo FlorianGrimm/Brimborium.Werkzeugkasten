@@ -18,7 +18,10 @@ function GetRoot(){
     }
 }
 #
-New-WKAppHost -ApplicationName "WKAppHostTest01" -ContentRootPath (GetRoot) -
+$WKPSAppHost = New-WKPSAppHost -ApplicationName "WKPSAppHostTest01" -ContentRootPath (GetRoot)
+$Logger = Get-WKLogger -WKPSAppHost $WKPSAppHost -Name 'Abc'
+$Logger.LogDebug("LogDebug {0} {1}", @(1,2))
+$Logger.LogError("LogError {0}", @("zero"))
 #
 Write-Host "-fini-"
 #

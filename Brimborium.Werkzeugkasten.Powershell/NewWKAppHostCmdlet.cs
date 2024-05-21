@@ -1,8 +1,8 @@
 ﻿namespace Brimborium.Werkzeugkasten.Powershell;
 
-[Cmdlet(VerbsCommon.New, "WKAppHost", ConfirmImpact = ConfirmImpact.None, SupportsShouldProcess = false, SupportsTransactions = false)]
-[OutputType(typeof(WKAppHost))]
-public sealed class NewWKAppHostCmdlet : PSCmdlet {
+[Cmdlet(VerbsCommon.New, nameof(WKPSAppHost), ConfirmImpact = ConfirmImpact.None, SupportsShouldProcess = false, SupportsTransactions = false)]
+[OutputType(typeof(WKPSAppHost))]
+public sealed class NewWKPSAppHostCmdlet : PSCmdlet {
     [Parameter(Position = 0)]
     public string? ApplicationName { get; set; }
 
@@ -12,16 +12,27 @@ public sealed class NewWKAppHostCmdlet : PSCmdlet {
     [Parameter(Position = 2)]
     public string? AppSettingsJsonPath { get; set; }
 
-    protected override void ProcessRecord() {
-        var appHost = WKAppHost.Create(this.ApplicationName, this.ContentRootPath);
+    [Parameter(Position = 3)]
+    public SwitchParameter ApplyHostConfiguration { get; set; }
 
+    protected override void ProcessRecord() {
+        var appHost = WKPSAppHost.Create(this.ApplicationName, this.ContentRootPath);
 
         if (this.AppSettingsJsonPath is { Length: > 0 } appSettingsJsonPath) {
             appHost.AddConfigurationJsonFile(appSettingsJsonPath, false);
-            appHost.ApplyHostConfiguration();
+            if (this.ApplyHostConfiguration.ToBool()) {
+                appHost.ApplyHostConfiguration();
+            }
+        } else {
+            appSettingsJsonPath = System.IO.Path.Combine(appHost.HostBuilder.Environment.ContentRootPath, "appsettings.json");
+            if (System.IO.File.Exists(appSettingsJsonPath)) {
+                appHost.AddConfigurationJsonFile(appSettingsJsonPath, false);
+                if (this.ApplyHostConfiguration.ToBool()) {
+                    appHost.ApplyHostConfiguration();
+                }
+            }
         }
 
         this.WriteObject(appHost);
     }
 }
-

@@ -1,7 +1,14 @@
+Set-StrictMode -Version Latest
+
 #Install-Module platyps -Force
+
 Import-Module platyps
 
-Import-Module 'Brimborium.Werkzeugkasten'
+$Module = Import-Module 'Brimborium.Werkzeugkasten' -PassThru -Verbose
+if ($null -eq $Module) {
+    Write-Error 'Cannot Import-Module Brimborium.Werkzeugkasten'
+    exit
+}
 <#
 $OutputFolder = 'helpmd'
 
@@ -24,7 +31,7 @@ $parameters = @{
     AlphabeticParamsOrder = $true
     UpdateInputOutput = $true
     ExcludeDontShow = $true
-    LogPath = 'helplog.txt'
+    LogPath = 'helpmd\helplog.txt'
     Encoding = [System.Text.Encoding]::UTF8
 }
 Update-MarkdownHelpModule @parameters

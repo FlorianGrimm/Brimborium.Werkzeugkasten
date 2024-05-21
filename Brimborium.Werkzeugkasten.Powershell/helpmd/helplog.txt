@@ -1,0 +1,66 @@
+
+[Update-MarkdownHelpModule] 05/21/2024 16:49:43 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/21/2024 16:49:43 [Update-MarkdownHelpModule]21.05.2024 16:49:43
+[Update-MarkdownHelpModule] 05/21/2024 16:49:43 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+[Update-MarkdownHelp] 05/21/2024 16:49:43 Command 'New-WKPSAppHost' not found in the session, skipping upgrade for 'C:\github.com\FlorianGrimm\Brimborium.Werkzeugkasten\Brimborium.Werkzeugkasten.Powershell\helpmd\New-WKPSAppHost.md'.
+[Update-MarkdownHelpModule] 05/21/2024 17:51:23 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/21/2024 17:51:23 [Update-MarkdownHelpModule]21.05.2024 17:51:23
+[Update-MarkdownHelpModule] 05/21/2024 17:51:23 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+[Update-MarkdownHelp] 05/21/2024 17:51:24 Command 'New-WKPSAppHost' not found in the session, skipping upgrade for 'C:\github.com\FlorianGrimm\Brimborium.Werkzeugkasten\Brimborium.Werkzeugkasten.Powershell\helpmd\New-WKPSAppHost.md'.
+[Update-MarkdownHelpModule] 05/21/2024 17:51:51 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/21/2024 17:51:51 [Update-MarkdownHelpModule]21.05.2024 17:51:51
+[Update-MarkdownHelpModule] 05/21/2024 17:51:51 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+[Update-MarkdownHelp] 05/21/2024 17:51:52 Command 'New-WKPSAppHost' not found in the session, skipping upgrade for 'C:\github.com\FlorianGrimm\Brimborium.Werkzeugkasten\Brimborium.Werkzeugkasten.Powershell\helpmd\New-WKPSAppHost.md'.
+[Update-MarkdownHelpModule] 05/21/2024 17:53:15 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/21/2024 17:53:15 [Update-MarkdownHelpModule]21.05.2024 17:53:15
+[Update-MarkdownHelpModule] 05/21/2024 17:53:15 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+[Update-MarkdownHelp] 05/21/2024 17:53:16 Command 'New-WKPSAppHost' not found in the session, skipping upgrade for 'C:\github.com\FlorianGrimm\Brimborium.Werkzeugkasten\Brimborium.Werkzeugkasten.Powershell\helpmd\New-WKPSAppHost.md'.
+[Update-MarkdownHelpModule] 05/21/2024 17:54:08 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/21/2024 17:54:08 [Update-MarkdownHelpModule]21.05.2024 17:54:08
+[Update-MarkdownHelpModule] 05/21/2024 17:54:08 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+	Parameter Updated: ProgressAction
+		Position updated from Named to 
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/21/2024 17:54:08 Creating new markdown for command 'Get-WKLogger'
+[Update-MarkdownHelpModule] 05/21/2024 17:57:31 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/21/2024 17:57:31 [Update-MarkdownHelpModule]21.05.2024 17:57:31
+[Update-MarkdownHelpModule] 05/21/2024 17:57:31 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+

@@ -2,19 +2,147 @@
 <helpItems schema="maml" xmlns="http://msh">
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>New-WKAppHost</command:name>
-      <command:verb>New</command:verb>
-      <command:noun>WKAppHost</command:noun>
+      <command:name>Get-WKLogger</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>WKLogger</command:noun>
       <maml:description>
-        <maml:para>Creates a new instance of the WKAppHost, which contains configuration for logging.</maml:para>
+        <maml:para>Get a [Brimborium.Werkzeugkasten.WKLogger]</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Creates a new instance of the WKAppHost, which contains configuration for logging.</maml:para>
+      <maml:para>{{ Fill in the Description }}</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>New-WKAppHost</maml:name>
+        <maml:name>Get-WKLogger</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>WKPSAppHost</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill WKPSAppHost Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">WKPSAppHost</command:parameterValue>
+          <dev:type>
+            <maml:name>WKPSAppHost</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Name Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+          <maml:name>ProgressAction</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+          <dev:type>
+            <maml:name>ActionPreference</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Name Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+        <maml:name>ProgressAction</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+        <dev:type>
+          <maml:name>ActionPreference</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>WKPSAppHost</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill WKPSAppHost Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">WKPSAppHost</command:parameterValue>
+        <dev:type>
+          <maml:name>WKPSAppHost</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Brimborium.Werkzeugkasten.WKLogger</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; $Logger=Get-WKLogger -WKPSAppHost $WKPSAppHost -Name 'Abc'
+PS C:\&gt; $Logger</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-WKPSAppHost</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>WKPSAppHost</command:noun>
+      <maml:description>
+        <maml:para>Creates a new instance of the WKPSAppHost, which contains configuration for logging.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Creates a new instance of the WKPSAppHost, which contains configuration for logging.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-WKPSAppHost</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ApplicationName</maml:name>
           <maml:description>
@@ -42,7 +170,7 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
           <maml:name>AppSettingsJsonPath</maml:name>
           <maml:description>
-            <maml:para>Loads the configuration from the specified appsettings.json file.</maml:para>
+            <maml:para>Loads the configuration from the specified appsettings.json file. -AppSettingsJsonPath is optional. If not set, the appsettings.json file in the ContentRootPath is used. if the file exists the configuration "Host" is used to configure the host.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -81,7 +209,7 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
         <maml:name>AppSettingsJsonPath</maml:name>
         <maml:description>
-          <maml:para>Loads the configuration from the specified appsettings.json file.</maml:para>
+          <maml:para>Loads the configuration from the specified appsettings.json file. -AppSettingsJsonPath is optional. If not set, the appsettings.json file in the ContentRootPath is used. if the file exists the configuration "Host" is used to configure the host.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -128,7 +256,7 @@
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>Brimborium.Werkzeugkasten.WKAppHost</maml:name>
+          <maml:name>Brimborium.Werkzeugkasten.WKPSAppHost</maml:name>
         </dev:type>
         <maml:description>
           <maml:para></maml:para>
@@ -143,9 +271,9 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; $AppHost = New-WKAppHost -ApplicationName 'MyPowershell' -AppSettingsJsonPath 'appsettings.json'</dev:code>
+        <dev:code>PS C:\&gt; $AppHost = New-WKPSAppHost -ApplicationName 'MyPowershell' -AppSettingsJsonPath 'appsettings.json'</dev:code>
         <dev:remarks>
-          <maml:para>Creates a new instance of the WKAppHost with the specified application name and appsettings.json path.</maml:para>
+          <maml:para>Creates a new instance of the WKPSAppHost with the specified application name and appsettings.json path.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>

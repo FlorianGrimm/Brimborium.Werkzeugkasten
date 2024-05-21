@@ -1,31 +1,6 @@
-﻿using Brimborium.Werkzeugkasten.FileLogging;
-
-using OpenTelemetry;
-using OpenTelemetry.Exporter;
-using OpenTelemetry.Logs;
-using OpenTelemetry.Metrics;
-using OpenTelemetry.Resources;
-using OpenTelemetry.Trace;
-
-namespace Brimborium.Werkzeugkasten;
+﻿namespace Brimborium.Werkzeugkasten;
 
 public class WKAppHost {
-    public static WKAppHost Create(
-        string? applicationName = default,
-        string? contentRootPath = default) {
-        if (string.IsNullOrWhiteSpace(applicationName)) { applicationName = "Powershell"; }
-        if (string.IsNullOrWhiteSpace(contentRootPath)) { contentRootPath = System.IO.Path.GetFullPath("."); }
-
-        var settings = new Microsoft.Extensions.Hosting.HostApplicationBuilderSettings();
-        settings.ApplicationName = applicationName;
-        settings.ContentRootPath = contentRootPath;
-        var hostBuilder = Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder();
-        var result = new WKAppHost(hostBuilder);
-        result._AppHostOption.ApplicationName = applicationName;
-        result._AppHostOption.ContentRootPath = contentRootPath;
-        return result;
-    }
-
     protected Microsoft.Extensions.Hosting.HostApplicationBuilder _HostBuilder;
     protected Microsoft.Extensions.Hosting.IHost? _Host;
     protected WKAppHostOption _AppHostOption = new();
@@ -49,24 +24,21 @@ public class WKAppHost {
         return this._Host = builder.Build();
     }
 
-    public WKAppHost AddConfigurationUserSecrets(string name) {
+    public void AddConfigurationUserSecrets(string name) {
         this.Configuration.AddUserSecrets(name);
-        return this;
     }
-    public WKAppHost AddConfigurationJsonFile(string name, bool optional) {
+    public void AddConfigurationJsonFile(string name, bool optional) {
         this.Configuration.AddJsonFile(name, optional);
-        return this;
     }
-    public WKAppHost AddConfigurationInMemoryCollection(IEnumerable<KeyValuePair<string, string?>>? initialData) {
+    public void AddConfigurationInMemoryCollection(IEnumerable<KeyValuePair<string, string?>>? initialData) {
         this.Configuration.AddInMemoryCollection(initialData);
-        return this;
     }
 
     public WKAppHost ApplyHostConfiguration(
         string? configurationKeyHostBuilder = default,
         string? configurationKeyOpenTelemetry = default
         ) {
-        var sectionKeyHostBuilder = string.IsNullOrEmpty(configurationKeyHostBuilder) ? "HostBuilder" : configurationKeyHostBuilder!;
+        var sectionKeyHostBuilder = string.IsNullOrEmpty(configurationKeyHostBuilder) ? "Host" : configurationKeyHostBuilder!;
         this._AppHostOption.Bind(this._HostBuilder.Configuration.GetSection(sectionKeyHostBuilder));
         var sectionKeyOpenTelemetry = string.IsNullOrEmpty(configurationKeyOpenTelemetry) ? "OpenTelemetry" : configurationKeyOpenTelemetry!;
         this._OpenTelemetryOption.Bind(this._HostBuilder.Configuration.GetSection(sectionKeyOpenTelemetry));
@@ -91,6 +63,8 @@ public class WKAppHost {
             }
         }
         if (this._AppHostOption.EnableLogger is { Length: > 0 } arrEnableLogger) {
+            this._HostBuilder.Logging.ClearProviders();
+
             foreach (var item in arrEnableLogger) {
                 if (string.Equals(item, "Console", StringComparison.OrdinalIgnoreCase)) {
                     this._HostBuilder.Logging.AddConsole();
@@ -118,7 +92,6 @@ public class WKAppHost {
                 }
             }
         }
-
 
         if (this._OpenTelemetryOption.EnableLogger
             || this._OpenTelemetryOption.EnableTracing
@@ -202,6 +175,25 @@ public class WKAppHost {
         return result;
     }
 
+    public void AddLoggingConsole() {
+        this._HostBuilder.Logging.AddConsole();
+    }
+
+    public void AddLoggingLocalFile() {
+        this._HostBuilder.Logging.AddLocalFileLogger();
+    }
+
+    public void AddLoggingLocalFile1() {
+        this._HostBuilder.Logging.AddLocalFileLogger1();
+    }
+
+    public void AddLoggingLocalFile2() {
+        this._HostBuilder.Logging.AddLocalFileLogger2();
+    }
+
+    public void AddLoggingLocalFile3() {
+        this._HostBuilder.Logging.AddLocalFileLogger3();
+    }
 
     public void FlushLogger() {
         if (this._Host is null) { return; }
@@ -211,111 +203,6 @@ public class WKAppHost {
             ;
         foreach (var batchingLoggerProvider in listBatchingLoggerProvider) {
             batchingLoggerProvider.Flush();
-        }
-    }
-}
-
-public class WKAppHostOption {
-    public WKAppHostOption() { }
-
-    public string? ApplicationName { get; set; }
-
-    public string? ContentRootPath { get; set; }
-
-    public string[]? ConfigurationJsonFile { get; set; }
-
-    public string[]? ConfigurationUserSecret { get; set; }
-
-    public string[]? EnableLogger { get; set; }
-
-    public void Bind(IConfiguration configuration) {
-        if (configuration.GetValue<string?>(nameof(WKAppHostOption.ApplicationName), null) is { Length: > 0 } applicationName) {
-            this.ApplicationName = applicationName;
-        }
-        if (configuration.GetValue<string?>(nameof(WKAppHostOption.ContentRootPath), null) is { Length: > 0 } contentRootPath) {
-            this.ContentRootPath = contentRootPath;
-        }
-        if (configuration.GetValue<string[]?>(nameof(WKAppHostOption.ConfigurationJsonFile), null) is { Length: > 0 } configurationJsonFile) {
-            this.ConfigurationJsonFile = configurationJsonFile;
-        }
-        if (configuration.GetValue<string[]?>(nameof(WKAppHostOption.ConfigurationUserSecret), null) is { Length: > 0 } configurationUserSecret) {
-            this.ConfigurationUserSecret = configurationUserSecret;
-        }
-        if (configuration.GetValue<string[]?>(nameof(WKAppHostOption.EnableLogger), null) is { Length: > 0 } enableLogger) {
-            this.EnableLogger = enableLogger;
-        }
-    }
-}
-
-
-public class OpenTelemetryOption {
-    public OpenTelemetryResourceOption? Resource { get; set; } = new();
-    public bool EnableLogger { get; set; }
-    public OtlpExporterOptions? LoggerOtlpExporter { get; set; }
-    public bool EnableTracing { get; set; }
-    public OtlpExporterOptions? TracingOtlpExporter { get; set; }
-    public bool EnableMetrics { get; set; }
-    public OtlpExporterOptions? MetricsOtlpExporter { get; set; }
-    public OpenTelemetryCommonOtlpExporterOptions? OtlpExporter { get; set; }
-
-    public void Bind(IConfiguration configuration) {
-        if (configuration.GetValue<bool?>(nameof(OpenTelemetryOption.EnableLogger), null) is bool enableLogger) {
-            this.EnableLogger = enableLogger;
-        }
-        if (configuration.GetValue<bool?>(nameof(OpenTelemetryOption.EnableTracing), false) is bool enableTracing) {
-            this.EnableTracing = enableTracing;
-        }
-        if (configuration.GetValue<bool?>(nameof(OpenTelemetryOption.EnableMetrics), false) is bool enableMetrics) {
-            this.EnableMetrics = enableMetrics;
-        }
-        if (configuration.GetSection(nameof(OpenTelemetryOption.Resource)) is IConfiguration resourceConfiguration) {
-            this.Resource ??= new();
-            this.Resource.Bind(resourceConfiguration);
-        }
-
-    }
-}
-
-public class OpenTelemetryResourceOption {
-    public string ServiceName { get; set; } = string.Empty;
-    public string? ServiceNamespace { get; set; } = null;
-    public string? ServiceVersion { get; set; } = null;
-    public bool AutoGenerateServiceInstanceId { get; set; } = true;
-    public string? ServiceInstanceId { get; set; } = null;
-
-    public void Bind(IConfiguration configuration) {
-        if (configuration.GetValue<string?>(nameof(OpenTelemetryResourceOption.ServiceName), default) is { Length: > 0 } serviceName) {
-            this.ServiceName = serviceName;
-        }
-        if (configuration.GetValue<string?>(nameof(OpenTelemetryResourceOption.ServiceNamespace), default) is { Length: > 0 } serviceNamespace) {
-            this.ServiceNamespace = serviceNamespace;
-        }
-        if (configuration.GetValue<string?>(nameof(OpenTelemetryResourceOption.ServiceVersion), default) is { Length: > 0 } serviceVersion) {
-            this.ServiceVersion = serviceVersion;
-        }
-        {
-            if (configuration.GetValue<string?>(nameof(OpenTelemetryResourceOption.ServiceInstanceId), default) is { Length: > 0 } serviceInstanceId) {
-                this.ServiceInstanceId = serviceInstanceId;
-                this.AutoGenerateServiceInstanceId = false;
-            } else {
-                this.AutoGenerateServiceInstanceId = true;
-            }
-        }
-    }
-}
-
-public class OpenTelemetryCommonOtlpExporterOptions {
-    public OpenTelemetryCommonOtlpExporterOptions() { }
-
-    public OtlpExportProtocol? Protocol { get; set; }
-    public string? Endpoint { get; set; }
-
-    public void Bind(IConfiguration configuration) {
-        if (configuration.GetValue<OtlpExporterOptions?>(nameof(OpenTelemetryCommonOtlpExporterOptions.Protocol), default) is { } protocol) {
-            this.Protocol = protocol.Protocol;
-        }
-        if (configuration.GetValue<string?>(nameof(OpenTelemetryCommonOtlpExporterOptions.Endpoint), default) is { Length: > 0 } endpoint) {
-            this.Endpoint = endpoint;
         }
     }
 }
