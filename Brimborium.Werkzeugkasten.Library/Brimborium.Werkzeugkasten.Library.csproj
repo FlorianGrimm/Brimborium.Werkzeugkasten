@@ -5,6 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Brimborium.Werkzeugkasten</RootNamespace>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     </PropertyGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net472'">

@@ -1,13 +1,17 @@
 ﻿namespace Brimborium.Werkzeugkasten;
 
 public class WKDataverseConnection {
-    internal WKDataverseConnection(ServiceClient serviceClient) {
+
+    internal WKDataverseConnection(ServiceClient serviceClient, WKAppHost wkAppHost) {
         this.ServiceClient = serviceClient;
+        this.WKAppHost = wkAppHost;
     }
 
     public bool IsConnected => (this.ServiceClient is { } serviceClient) ? serviceClient.IsReady : false;
 
     public ServiceClient ServiceClient { get; }
+
+    public WKAppHost WKAppHost { get; }
 
     /// <summary>
     /// Total Count of all Execute calls.
