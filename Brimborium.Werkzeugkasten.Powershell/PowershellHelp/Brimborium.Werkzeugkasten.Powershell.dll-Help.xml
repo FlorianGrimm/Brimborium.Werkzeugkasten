@@ -2,6 +2,388 @@
 <helpItems schema="maml" xmlns="http://msh">
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
+      <command:name>ConvertFrom-WKDatatable</command:name>
+      <command:verb>ConvertFrom</command:verb>
+      <command:noun>WKDatatable</command:noun>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertFrom-WKDatatable</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>InputDataTable</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill InputDataTable Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+          <dev:type>
+            <maml:name>DataTable</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>OutputCollection</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill OutputCollection Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">EntityCollection</command:parameterValue>
+          <dev:type>
+            <maml:name>EntityCollection</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>MetaEntity</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill MetaEntity Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">WKMetaEntity</command:parameterValue>
+          <dev:type>
+            <maml:name>WKMetaEntity</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+          <maml:name>MappingEntity</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill MappingEntity Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">WKMappingEntity</command:parameterValue>
+          <dev:type>
+            <maml:name>WKMappingEntity</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+          <maml:name>ProgressAction</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+          <dev:type>
+            <maml:name>ActionPreference</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>InputDataTable</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill InputDataTable Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">DataTable</command:parameterValue>
+        <dev:type>
+          <maml:name>DataTable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+        <maml:name>MappingEntity</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill MappingEntity Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">WKMappingEntity</command:parameterValue>
+        <dev:type>
+          <maml:name>WKMappingEntity</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>MetaEntity</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill MetaEntity Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">WKMetaEntity</command:parameterValue>
+        <dev:type>
+          <maml:name>WKMetaEntity</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>OutputCollection</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill OutputCollection Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">EntityCollection</command:parameterValue>
+        <dev:type>
+          <maml:name>EntityCollection</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+        <maml:name>ProgressAction</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+        <dev:type>
+          <maml:name>ActionPreference</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Microsoft.Xrm.Sdk.EntityCollection</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Export-WKSolution</command:name>
+      <command:verb>Export</command:verb>
+      <command:noun>WKSolution</command:noun>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Export-WKSolution</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Connection</maml:name>
+          <maml:description>
+            <maml:para>Connection to access Dataverse.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">WKDataverseConnection</command:parameterValue>
+          <dev:type>
+            <maml:name>WKDataverseConnection</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>SolutionName</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill SolutionName Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>Managed</maml:name>
+          <maml:description>
+            <maml:para>Export Managed Solution.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+          <maml:name>Folder</maml:name>
+          <maml:description>
+            <maml:para>The export folder.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+          <maml:name>FileName</maml:name>
+          <maml:description>
+            <maml:para>the export fileName: '{SolutionName}-{Now}.zip' used if not set. '{SolutionName}' is replaced by the SolutionName. '{Now}' is replaced by the current DateTime 'yyyy-MM-dd-HH-mm-ss'. '{Today}' is replaced by the current Date 'yyyy-MM-dd'.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+          <maml:name>ProgressAction</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+          <dev:type>
+            <maml:name>ActionPreference</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Connection</maml:name>
+        <maml:description>
+          <maml:para>Connection to access Dataverse.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">WKDataverseConnection</command:parameterValue>
+        <dev:type>
+          <maml:name>WKDataverseConnection</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+        <maml:name>FileName</maml:name>
+        <maml:description>
+          <maml:para>the export fileName: '{SolutionName}-{Now}.zip' used if not set. '{SolutionName}' is replaced by the SolutionName. '{Now}' is replaced by the current DateTime 'yyyy-MM-dd-HH-mm-ss'. '{Today}' is replaced by the current Date 'yyyy-MM-dd'.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+        <maml:name>Folder</maml:name>
+        <maml:description>
+          <maml:para>The export folder.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>Managed</maml:name>
+        <maml:description>
+          <maml:para>Export Managed Solution.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+        <maml:name>ProgressAction</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+        <dev:type>
+          <maml:name>ActionPreference</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>SolutionName</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill SolutionName Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Byte[]</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Byte[]</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
       <command:name>Get-WKLogger</command:name>
       <command:verb>Get</command:verb>
       <command:noun>WKLogger</command:noun>
@@ -130,6 +512,819 @@ PS C:\&gt; $Logger</dev:code>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
+      <command:name>New-WKDataverseConnection</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>WKDataverseConnection</command:noun>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-WKDataverseConnection</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>WKPSAppHost</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill WKPSAppHost Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">WKPSAppHost</command:parameterValue>
+          <dev:type>
+            <maml:name>WKPSAppHost</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>DataverseConnectionString</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill DataverseConnectionString Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">WKDataverseConnectionString</command:parameterValue>
+          <dev:type>
+            <maml:name>WKDataverseConnectionString</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>Logger</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Logger Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ILogger</command:parameterValue>
+          <dev:type>
+            <maml:name>ILogger</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+          <maml:name>ProgressAction</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+          <dev:type>
+            <maml:name>ActionPreference</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>New-WKDataverseConnection</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>WKPSAppHost</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill WKPSAppHost Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">WKPSAppHost</command:parameterValue>
+          <dev:type>
+            <maml:name>WKPSAppHost</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Name Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>Logger</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Logger Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ILogger</command:parameterValue>
+          <dev:type>
+            <maml:name>ILogger</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+          <maml:name>ProgressAction</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+          <dev:type>
+            <maml:name>ActionPreference</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>DataverseConnectionString</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill DataverseConnectionString Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">WKDataverseConnectionString</command:parameterValue>
+        <dev:type>
+          <maml:name>WKDataverseConnectionString</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>Logger</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Logger Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ILogger</command:parameterValue>
+        <dev:type>
+          <maml:name>ILogger</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Name Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+        <maml:name>ProgressAction</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+        <dev:type>
+          <maml:name>ActionPreference</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>WKPSAppHost</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill WKPSAppHost Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">WKPSAppHost</command:parameterValue>
+        <dev:type>
+          <maml:name>WKPSAppHost</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Brimborium.Werkzeugkasten.WKDataverseConnection</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-WKDataverseConnectionString</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>WKDataverseConnectionString</command:noun>
+      <maml:description>
+        <maml:para>Create a new connection string for Dataverse.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Create a new connection string for Dataverse.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-WKDataverseConnectionString</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>AuthenticationType</maml:name>
+          <maml:description>
+            <maml:para>AuthenticationType: AD, OAuth, Certificate, ClientSecret</maml:para>
+            <maml:para>-AuthenticationType [Microsoft.PowerPlatform.Dataverse.Client.AuthenticationType]::OAuth -AuthenticationType [Microsoft.PowerPlatform.Dataverse.Client.AuthenticationType]::ClientSecret</maml:para>
+          </maml:description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">AD</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">OAuth</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">Certificate</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">ClientSecret</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">ExternalTokenManagement</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">InvalidConnection</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">AuthenticationType</command:parameterValue>
+          <dev:type>
+            <maml:name>AuthenticationType</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>ServiceUri</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ServiceUri Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="10" aliases="none">
+          <maml:name>TokenCacheStorePath</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill TokenCacheStorePath Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="11" aliases="none">
+          <maml:name>LoginPrompt</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill LoginPrompt Description }}</maml:para>
+          </maml:description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">Auto</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">Always</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">RefreshSession</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">SelectAccount</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">Never</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">PromptBehavior</command:parameterValue>
+          <dev:type>
+            <maml:name>PromptBehavior</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="12" aliases="none">
+          <maml:name>CertificateThumbprint</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill CertificateThumbprint Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="13" aliases="none">
+          <maml:name>CertificateStoreName</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill CertificateStoreName Description }}</maml:para>
+          </maml:description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">AddressBook</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">AuthRoot</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">CertificateAuthority</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">Disallowed</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">My</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">Root</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">TrustedPeople</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">TrustedPublisher</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">StoreName</command:parameterValue>
+          <dev:type>
+            <maml:name>StoreName</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="14" aliases="none">
+          <maml:name>SkipDiscovery</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill SkipDiscovery Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+          <maml:name>UserName</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill UserName Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+          <maml:name>Password</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Password Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">SecureString</command:parameterValue>
+          <dev:type>
+            <maml:name>SecureString</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+          <maml:name>Domain</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Domain Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="5" aliases="none">
+          <maml:name>HomeRealmUri</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill HomeRealmUri Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="6" aliases="none">
+          <maml:name>RequireNewInstance</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill RequireNewInstance Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="7" aliases="none">
+          <maml:name>ClientId</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ClientId Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="8" aliases="none">
+          <maml:name>ClientSecret</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ClientSecret Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="9" aliases="none">
+          <maml:name>RedirectUri</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill RedirectUri Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+          <maml:name>ProgressAction</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+          <dev:type>
+            <maml:name>ActionPreference</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>New-WKDataverseConnectionString</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>ConnectionString</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ConnectionString Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+          <maml:name>ProgressAction</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+          <dev:type>
+            <maml:name>ActionPreference</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>AuthenticationType</maml:name>
+        <maml:description>
+          <maml:para>AuthenticationType: AD, OAuth, Certificate, ClientSecret</maml:para>
+          <maml:para>-AuthenticationType [Microsoft.PowerPlatform.Dataverse.Client.AuthenticationType]::OAuth -AuthenticationType [Microsoft.PowerPlatform.Dataverse.Client.AuthenticationType]::ClientSecret</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">AuthenticationType</command:parameterValue>
+        <dev:type>
+          <maml:name>AuthenticationType</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="13" aliases="none">
+        <maml:name>CertificateStoreName</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill CertificateStoreName Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">StoreName</command:parameterValue>
+        <dev:type>
+          <maml:name>StoreName</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="12" aliases="none">
+        <maml:name>CertificateThumbprint</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill CertificateThumbprint Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="7" aliases="none">
+        <maml:name>ClientId</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ClientId Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="8" aliases="none">
+        <maml:name>ClientSecret</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ClientSecret Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>ConnectionString</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ConnectionString Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+        <maml:name>Domain</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Domain Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="5" aliases="none">
+        <maml:name>HomeRealmUri</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill HomeRealmUri Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="11" aliases="none">
+        <maml:name>LoginPrompt</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill LoginPrompt Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">PromptBehavior</command:parameterValue>
+        <dev:type>
+          <maml:name>PromptBehavior</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+        <maml:name>Password</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Password Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SecureString</command:parameterValue>
+        <dev:type>
+          <maml:name>SecureString</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
+        <maml:name>ProgressAction</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ProgressAction Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+        <dev:type>
+          <maml:name>ActionPreference</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="9" aliases="none">
+        <maml:name>RedirectUri</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill RedirectUri Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="6" aliases="none">
+        <maml:name>RequireNewInstance</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill RequireNewInstance Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>ServiceUri</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ServiceUri Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="14" aliases="none">
+        <maml:name>SkipDiscovery</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill SkipDiscovery Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="10" aliases="none">
+        <maml:name>TokenCacheStorePath</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill TokenCacheStorePath Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <maml:name>UserName</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill UserName Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Brimborium.Werkzeugkasten.WKDataverseConnectionString</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; WKDataverseConnectionString -ConnectionString 'AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com;Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;TokenCacheStorePath=c:\MyTokenCache;LoginPrompt=Auto'</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-WKOrganizationRequest</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>WKOrganizationRequest</command:noun>
+      <maml:description>
+        <maml:para>Create a new OrganizationRequest.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Create a new OrganizationRequest.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-WKOrganizationRequest</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="false" position="named" aliases="none">
+        <maml:name>OrganizationRequestKind</maml:name>
+        <maml:description>
+          <maml:para>The type of the OrganizationRequest to create. </maml:para>
+          <maml:para>```yaml Type: WKOrganizationRequestKind Parameter Sets: (All) Aliases: Accepted values: CrmAddAppComponentsRequest, CrmAddChannelAccessProfilePrivilegesRequest, CrmAddItemCampaignActivityRequest, CrmAddItemCampaignRequest, CrmAddListMembersListRequest, CrmAddMemberListRequest, CrmAddMembersTeamRequest, CrmAddPrincipalToQueueRequest, CrmAddPrivilegesRoleRequest, CrmAddProductToKitRequest, CrmAddRecurrenceRequest, CrmAddSolutionComponentRequest, CrmAddSubstituteProductRequest, CrmAddToQueueRequest, CrmAddUserToRecordTeamRequest, CrmApplyRecordCreationAndUpdateRuleRequest, CrmApplyRoutingRuleRequest, CrmAssignRequest, CrmAssociateEntitiesRequest, CrmAutoMapEntityRequest, CrmBackgroundSendEmailRequest, CrmBookRequest, CrmBulkDeleteRequest, CrmBulkDetectDuplicatesRequest, CrmCalculateActualValueOpportunityRequest, CrmCalculatePriceRequest, CrmCalculateRollupFieldRequest, CrmCalculateTotalTimeIncidentRequest, CrmCancelContractRequest, CrmCancelSalesOrderRequest, CrmCheckIncomingEmailRequest, CrmCheckPromoteEmailRequest, CrmCloneAsPatchRequest, CrmCloneAsSolutionRequest, CrmCloneContractRequest, CrmCloneMobileOfflineProfileRequest, CrmCloneProductRequest, CrmCloseIncidentRequest, CrmCloseQuoteRequest, CrmCommitAnnotationBlocksUploadRequest, CrmCommitAttachmentBlocksUploadRequest, CrmCommitFileBlocksUploadRequest, CrmCompoundCreateRequest, CrmCompoundUpdateDuplicateDetectionRuleRequest, CrmCompoundUpdateRequest, CrmConvertKitToProductRequest, CrmConvertOwnerTeamToAccessTeamRequest, CrmConvertProductToKitRequest, CrmConvertQuoteToSalesOrderRequest, CrmConvertSalesOrderToInvoiceRequest, CrmCopyCampaignRequest, CrmCopyCampaignResponseRequest, CrmCopyDynamicListToStaticRequest, CrmCopyMembersListRequest, CrmCopySystemFormRequest, CrmCreateActivitiesListRequest, CrmCreateAsyncJobToRevokeInheritedAccessRequest, CrmCreateExceptionRequest, CrmCreateInstanceRequest, CrmCreateKnowledgeArticleTranslationRequest, CrmCreateKnowledgeArticleVersionRequest, CrmCreatePolymorphicLookupAttributeRequest, CrmCreateWorkflowFromTemplateRequest, CrmDeleteAndPromoteAsyncRequest, CrmDeleteAndPromoteRequest, CrmDeleteAuditDataRequest, CrmDeleteFileRequest, CrmDeleteOpenInstancesRequest, CrmDeleteRecordChangeHistory1Request, CrmDeleteRecordChangeHistoryRequest, CrmDeliverImmediatePromoteEmailRequest, CrmDeliverIncomingEmailRequest, CrmDeliverPromoteEmailRequest, CrmDeprovisionLanguageRequest, CrmDisassociateEntitiesRequest, CrmDistributeCampaignActivityRequest, CrmDownloadBlockRequest, CrmDownloadReportDefinitionRequest, CrmDownloadSolutionExportDataRequest, CrmExecuteByIdSavedQueryRequest, CrmExecuteByIdUserQueryRequest, CrmExecuteFetchRequest, CrmExecuteWorkflowRequest, CrmExpandCalendarRequest, CrmExportFieldTranslationRequest, CrmExportMappingsImportMapRequest, CrmExportSolutionAsyncRequest, CrmExportSolutionRequest, CrmExportTranslationRequest, CrmFetchXmlToQueryExpressionRequest, CrmFindParentResourceGroupRequest, CrmFormatAddressRequest, CrmFulfillSalesOrderRequest, CrmFullTextSearchKnowledgeArticleRequest, CrmGenerateInvoiceFromOpportunityRequest, CrmGenerateQuoteFromOpportunityRequest, CrmGenerateSalesOrderFromOpportunityRequest, CrmGenerateSharedLinkRequest, CrmGenerateSocialProfileRequest, CrmGetAllTimeZonesWithDisplayNameRequest, CrmGetAutoNumberSeed1Request, CrmGetAutoNumberSeedRequest, CrmGetDecryptionKeyRequest, CrmGetDefaultPriceLevelRequest, CrmGetDistinctValuesImportFileRequest, CrmGetFileSasUrlRequest, CrmGetHeaderColumnsImportFileRequest, CrmGetInvoiceProductsFromOpportunityRequest, CrmGetNextAutoNumberValue1Request, CrmGetNextAutoNumberValueRequest, CrmGetPreferredSolutionRequest, CrmGetQuantityDecimalRequest, CrmGetQuoteProductsFromOpportunityRequest, CrmGetReportHistoryLimitRequest, CrmGetSalesOrderProductsFromOpportunityRequest, CrmGetTimeZoneCodeByLocalizedNameRequest, CrmGetTrackingTokenEmailRequest, CrmGrantAccessRequest, CrmGrantAccessUsingSharedLinkRequest, CrmImmediateBookRequest, CrmImportCardTypeSchemaRequest, CrmImportFieldTranslationRequest, CrmImportMappingsImportMapRequest, CrmImportRecordsImportRequest, CrmImportSolutionAsyncRequest, CrmImportSolutionRequest, CrmImportSolutionsRequest, CrmImportTranslationAsyncRequest, CrmImportTranslationRequest, CrmIncrementKnowledgeArticleViewCountRequest, CrmInitializeAnnotationBlocksDownloadRequest, CrmInitializeAnnotationBlocksUploadRequest, CrmInitializeAttachmentBlocksDownloadRequest, CrmInitializeAttachmentBlocksUploadRequest, CrmInitializeFileBlocksDownloadRequest, CrmInitializeFileBlocksUploadRequest, CrmInitializeFromRequest, CrmInitializeModernFlowFromAsyncWorkflowRequest, CrmInstallSampleDataRequest, CrmInstantiateFiltersRequest, CrmInstantiateTemplateRequest, CrmIsBackOfficeInstalledRequest, CrmIsComponentCustomizableRequest, CrmIsValidStateTransitionRequest, CrmLocalTimeFromUtcTimeRequest, CrmLockInvoicePricingRequest, CrmLockSalesOrderPricingRequest, CrmLoseOpportunityRequest, CrmMakeAvailableToOrganizationReportRequest, CrmMakeAvailableToOrganizationTemplateRequest, CrmMakeUnavailableToOrganizationReportRequest, CrmMakeUnavailableToOrganizationTemplateRequest, CrmMergeRequest, CrmModifyAccessRequest, CrmParseImportRequest, CrmPickFromQueueRequest, CrmPreferredSolutionUsedByRequest, CrmProcessInboundEmailRequest, CrmPropagateByExpressionRequest, CrmProvisionLanguageAsyncRequest, CrmProvisionLanguageRequest, CrmPublishAllXmlAsyncRequest, CrmPublishAllXmlRequest, CrmPublishDuplicateRuleRequest, CrmPublishProductHierarchyRequest, CrmPublishThemeRequest, CrmPublishXmlRequest, CrmQualifyLeadRequest, CrmQualifyMemberListRequest, CrmQueryExpressionToFetchXmlRequest, CrmQueryMultipleSchedulesRequest, CrmQueryScheduleRequest, CrmQueueUpdateRibbonClientMetadataRequest, CrmReassignObjectsOwnerRequest, CrmReassignObjectsSystemUserRequest, CrmRecalculateRequest, CrmReleaseToQueueRequest, CrmRemoveAppComponentsRequest, CrmRemoveFromQueueRequest, CrmRemoveItemCampaignActivityRequest, CrmRemoveItemCampaignRequest, CrmRemoveMemberListRequest, CrmRemoveMembersTeamRequest, CrmRemoveParentRequest, CrmRemovePrivilegeRoleRequest, CrmRemoveProductFromKitRequest, CrmRemoveRelatedRequest, CrmRemoveSolutionComponentRequest, CrmRemoveSubstituteProductRequest, CrmRemoveUserFromRecordTeamRequest, CrmRenewContractRequest, CrmRenewEntitlementRequest, CrmReplacePrivilegesRoleRequest, CrmRescheduleRequest, CrmResetUserFiltersRequest, CrmRetrieveAadUserPrivilegesRequest, CrmRetrieveAadUserRolesRequest, CrmRetrieveAadUserSetOfPrivilegesByIdsRequest, CrmRetrieveAadUserSetOfPrivilegesByNamesRequest, CrmRetrieveAbsoluteAndSiteCollectionUrlRequest, CrmRetrieveActivePathRequest, CrmRetrieveAllChildUsersSystemUserRequest, CrmRetrieveAnalyticsStoreDetailsRequest, CrmRetrieveAppComponentsRequest, CrmRetrieveApplicationRibbonRequest, CrmRetrieveAttributeChangeHistoryRequest, CrmRetrieveAuditDetailsRequest, CrmRetrieveAuditPartitionListRequest, CrmRetrieveAvailableLanguagesRequest, CrmRetrieveBusinessHierarchyBusinessUnitRequest, CrmRetrieveByGroupResourceRequest, CrmRetrieveByResourceResourceGroupRequest, CrmRetrieveByResourcesServiceRequest, CrmRetrieveByTopIncidentProductKbArticleRequest, CrmRetrieveByTopIncidentSubjectKbArticleRequest, CrmRetrieveChannelAccessProfilePrivilegesRequest, CrmRetrieveCurrentOrganizationRequest, CrmRetrieveDependenciesForDeleteRequest, CrmRetrieveDependenciesForUninstallRequest, CrmRetrieveDependentComponentsRequest, CrmRetrieveDeploymentLicenseTypeRequest, CrmRetrieveDeprovisionedLanguagesRequest, CrmRetrieveDuplicatesRequest, CrmRetrieveEntityRibbonRequest, CrmRetrieveExchangeAppointmentsRequest, CrmRetrieveExchangeRateRequest, CrmRetrieveFeatureControlSettingRequest, CrmRetrieveFeatureControlSettingsByNamespaceRequest, CrmRetrieveFeatureControlSettingsRequest, CrmRetrieveFilteredFormsRequest, CrmRetrieveFormattedImportJobResultsRequest, CrmRetrieveFormXmlRequest, CrmRetrieveInstalledLanguagePacksRequest, CrmRetrieveInstalledLanguagePackVersionRequest, CrmRetrieveLicenseInfoRequest, CrmRetrieveLocLabelsRequest, CrmRetrieveMailboxTrackingFoldersRequest, CrmRetrieveMembersBulkOperationRequest, CrmRetrieveMembersTeamRequest, CrmRetrieveMissingComponentsRequest, CrmRetrieveMissingDependenciesRequest, CrmRetrieveOrganizationInfoRequest, CrmRetrieveOrganizationResourcesRequest, CrmRetrieveParentGroupsResourceGroupRequest, CrmRetrieveParsedDataImportFileRequest, CrmRetrievePersonalWallRequest, CrmRetrievePrincipalAccessInfoRequest, CrmRetrievePrincipalAccessRequest, CrmRetrievePrincipalAttributePrivilegesRequest, CrmRetrievePrincipalSyncAttributeMappingsRequest, CrmRetrievePrivilegeSetRequest, CrmRetrieveProcessInstancesRequest, CrmRetrieveProductPropertiesRequest, CrmRetrieveProvisionedLanguagePackVersionRequest, CrmRetrieveProvisionedLanguagesRequest, CrmRetrieveRecordChangeHistoryRequest, CrmRetrieveRecordWallRequest, CrmRetrieveRequiredComponentsRequest, CrmRetrieveRolePrivilegesRoleRequest, CrmRetrieveSharedLinksRequest, CrmRetrieveSharedPrincipalsAndAccessRequest, CrmRetrieveSubGroupsResourceGroupRequest, CrmRetrieveSubsidiaryTeamsBusinessUnitRequest, CrmRetrieveSubsidiaryUsersBusinessUnitRequest, CrmRetrieveTeamPrivilegesRequest, CrmRetrieveTeamsSystemUserRequest, CrmRetrieveTimelineWallRecordsRequest, CrmRetrieveTotalRecordCountRequest, CrmRetrieveUnpublishedMultipleRequest, CrmRetrieveUnpublishedRequest, CrmRetrieveUserLicenseInfoRequest, CrmRetrieveUserPrivilegeByPrivilegeIdRequest, CrmRetrieveUserPrivilegeByPrivilegeNameRequest, CrmRetrieveUserPrivilegesRequest, CrmRetrieveUserQueuesRequest, CrmRetrieveUserSetOfPrivilegesByIdsRequest, CrmRetrieveUserSetOfPrivilegesByNamesRequest, CrmRetrieveUserSettingsSystemUserRequest, CrmRetrieveUsersPrivilegesThroughTeamsRequest, CrmRetrieveVersionRequest, CrmRevertProductRequest, CrmReviseQuoteRequest, CrmRevokeAccessRequest, CrmRevokeSharedLinkRequest, CrmRollupRequest, CrmRouteToRequest, CrmSearchByBodyKbArticleRequest, CrmSearchByKeywordsKbArticleRequest, CrmSearchByTitleKbArticleRequest, CrmSearchRequest, CrmSendBulkMailRequest, CrmSendEmailFromTemplateRequest, CrmSendEmailRequest, CrmSendFaxRequest, CrmSendTemplateRequest, CrmSetAutoNumberSeed1Request, CrmSetAutoNumberSeedRequest, CrmSetBusinessEquipmentRequest, CrmSetBusinessSystemUserRequest, CrmSetFeatureStatusRequest, CrmSetLocLabelsRequest, CrmSetParentBusinessUnitRequest, CrmSetParentSystemUserRequest, CrmSetParentTeamRequest, CrmSetPreferredSolutionRequest, CrmSetProcessRequest, CrmSetRelatedRequest, CrmSetReportRelatedRequest, CrmSetStateRequest, CrmStageAndUpgradeAsyncRequest, CrmStageAndUpgradeRequest, CrmStageSolutionRequest, CrmSyncBulkOperationRequest, CrmTransformImportRequest, CrmTriggerServiceEndpointCheckRequest, CrmUninstallSampleDataRequest, CrmUninstallSolutionAsyncRequest, CrmUnlockInvoicePricingRequest, CrmUnlockSalesOrderPricingRequest, CrmUnpublishDuplicateRuleRequest, CrmUpdateFeatureConfigRequest, CrmUpdateProductPropertiesRequest, CrmUpdateRibbonClientMetadataRequest, CrmUpdateSolutionComponentRequest, CrmUpdateUserSettingsSystemUserRequest, CrmUploadBlockRequest, CrmUtcTimeFromLocalTimeRequest, CrmValidateAppRequest, CrmValidateFetchXmlExpressionRequest, CrmValidateRecurrenceRuleRequest, CrmValidateRequest, CrmValidateSavedQueryRequest, CrmValidateUnpublishedRequest, CrmWhoAmIRequest, CrmWinOpportunityRequest, CrmWinQuoteRequest, XrmAssociateRequest, XrmCanBeReferencedRequest, XrmCanBeReferencingRequest, XrmCanManyToManyRequest, XrmConvertDateAndTimeBehaviorRequest, XrmCreateAsyncJobToRevokeInheritedAccessRequest, XrmCreateAttributeRequest, XrmCreateCustomerRelationshipsRequest, XrmCreateEntityKeyRequest, XrmCreateEntityRequest, XrmCreateManyToManyRequest, XrmCreateMultipleRequest, XrmCreateOneToManyRequest, XrmCreateOptionSetRequest, XrmCreateRequest, XrmDeleteAttributeRequest, XrmDeleteEntityKeyRequest, XrmDeleteEntityRequest, XrmDeleteOptionSetRequest, XrmDeleteOptionValueRequest, XrmDeleteRelationshipRequest, XrmDeleteRequest, XrmDisassociateRequest, XrmExecuteAsyncRequest, XrmExecuteMultipleRequest, XrmExecuteTransactionRequest, XrmGetValidManyToManyRequest, XrmGetValidReferencedEntitiesRequest, XrmGetValidReferencingEntitiesRequest, XrmInsertOptionValueRequest, XrmInsertStatusValueRequest, XrmIsDataEncryptionActiveRequest, XrmOrderOptionRequest, XrmReactivateEntityKeyRequest, XrmRetrieveAllEntitiesRequest, XrmRetrieveAllManagedPropertiesRequest, XrmRetrieveAllOptionSetsRequest, XrmRetrieveAttributeRequest, XrmRetrieveDataEncryptionKeyRequest, XrmRetrieveEntityChangesRequest, XrmRetrieveEntityKeyRequest, XrmRetrieveEntityRequest, XrmRetrieveManagedPropertyRequest, XrmRetrieveMetadataChangesRequest, XrmRetrieveMultipleRequest, XrmRetrieveOptionSetRequest, XrmRetrieveRelationshipRequest, XrmRetrieveRequest, XrmRetrieveTimestampRequest, XrmSetDataEncryptionKeyRequest, XrmUpdateAttributeRequest, XrmUpdateEntityRequest, XrmUpdateMultipleRequest, XrmUpdateOptionSetRequest, XrmUpdateOptionValueRequest, XrmUpdateRelationshipRequest, XrmUpdateRequest, XrmUpdateStateValueRequest, XrmUpsertMultipleRequest, XrmUpsertRequest</maml:para>
+          <maml:para>Required: True Position: 0 Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### -ProgressAction {{ Fill ProgressAction Description }}</maml:para>
+          <maml:para>```yaml Type: ActionPreference Parameter Sets: (All) Aliases: proga</maml:para>
+          <maml:para>Required: False Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### CommonParameters This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</maml:para>
+          <maml:para>## INPUTS</maml:para>
+          <maml:para>### None</maml:para>
+          <maml:para>## OUTPUTS</maml:para>
+          <maml:para>### Microsoft.Xrm.Sdk.OrganizationRequest</maml:para>
+          <maml:para>## NOTES</maml:para>
+          <maml:para>## RELATED LINKS</maml:para>
+          <maml:para></maml:para>
+          <maml:para>```yaml Type: WKOrganizationRequestKind Parameter Sets: (All) Aliases:</maml:para>
+          <maml:para>Required: True Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### -ProgressAction {{ Fill ProgressAction Description }}</maml:para>
+          <maml:para>```yaml Type: ActionPreference Parameter Sets: (All) Aliases: proga</maml:para>
+          <maml:para>Required: False Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### CommonParameters This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</maml:para>
+          <maml:para>## INPUTS</maml:para>
+          <maml:para>## OUTPUTS</maml:para>
+          <maml:para>## NOTES</maml:para>
+          <maml:para>## RELATED LINKS</maml:para>
+          <maml:para></maml:para>
+          <maml:para>```yaml Type: WKOrganizationRequestKind Parameter Sets: (All) Aliases:</maml:para>
+          <maml:para>Required: True Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### -ProgressAction {{ Fill ProgressAction Description }}</maml:para>
+          <maml:para>```yaml Type: ActionPreference Parameter Sets: (All) Aliases: proga</maml:para>
+          <maml:para>Required: False Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### CommonParameters This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</maml:para>
+          <maml:para>## INPUTS</maml:para>
+          <maml:para>## OUTPUTS</maml:para>
+          <maml:para>## NOTES</maml:para>
+          <maml:para>## RELATED LINKS</maml:para>
+          <maml:para></maml:para>
+          <maml:para>```yaml Type: WKOrganizationRequestKind Parameter Sets: (All) Aliases:</maml:para>
+          <maml:para>Required: True Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### -ProgressAction {{ Fill ProgressAction Description }}</maml:para>
+          <maml:para>```yaml Type: ActionPreference Parameter Sets: (All) Aliases: proga</maml:para>
+          <maml:para>Required: False Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
+          <maml:para>### CommonParameters This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</maml:para>
+          <maml:para>## INPUTS</maml:para>
+          <maml:para>## OUTPUTS</maml:para>
+          <maml:para>## NOTES</maml:para>
+          <maml:para>## RELATED LINKS</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false"></command:parameterValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert />
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt;  $r=New-WKOrganizationRequest -OrganizationRequestKind XrmUpsertRequest
+PS C:\&gt; $r.GetType().FullName
+Microsoft.Xrm.Sdk.Messages.UpsertRequest</dev:code>
+        <dev:remarks>
+          <maml:para>Creates a [Microsoft.Xrm.Sdk.Messages.UpsertRequest].</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
       <command:name>New-WKPSAppHost</command:name>
       <command:verb>New</command:verb>
       <command:noun>WKPSAppHost</command:noun>
@@ -179,6 +1374,17 @@ PS C:\&gt; $Logger</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>ApplyHostConfiguration</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ApplyHostConfiguration Description }}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="proga">
           <maml:name>ProgressAction</maml:name>
           <maml:description>
@@ -205,6 +1411,18 @@ PS C:\&gt; $Logger</dev:code>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>ApplyHostConfiguration</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ApplyHostConfiguration Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
         <maml:name>AppSettingsJsonPath</maml:name>

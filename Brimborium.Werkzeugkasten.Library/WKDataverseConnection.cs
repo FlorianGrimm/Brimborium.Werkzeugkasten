@@ -2,6 +2,57 @@
 
 public class WKDataverseConnection {
 
+    private static bool ValidateWKDataverseConnectionName(string name) => (string.IsNullOrWhiteSpace(name) || (0 <= name.IndexOf(':')));
+
+    public static WKDataverseConnection? GetWKDataverseConnectionFromConfiguration(WKAppHost wkAppHost, string name, ILogger? logger = default) {
+        if (!ValidateWKDataverseConnectionName(name)) { throw new ArgumentException(nameof(name)); }
+
+        {
+            var connectionString = wkAppHost.HostBuilder.Configuration.GetValue<string?>($"ConnectionStrings:{name}", default);
+            if (!string.IsNullOrEmpty(connectionString)) {
+                var wkDataverseConnectionString = new WKDataverseConnectionString() {
+                    Name = name,
+                    ConnectionString = connectionString
+                };
+                return GetWKDataverseConnectionFromConnectionString(wkAppHost, wkDataverseConnectionString, logger);
+            }
+        }
+        {
+            var section = wkAppHost.HostBuilder.Configuration.GetSection($"WKDataverseConnection:{name}");
+            if (section.Exists()) {
+                var wkDataverseConnectionString = new WKDataverseConnectionString() {
+                    Name = name
+                };
+                wkDataverseConnectionString.Bind(section);
+                return GetWKDataverseConnectionFromConnectionString(wkAppHost, wkDataverseConnectionString, logger);
+            }
+        }
+        return default;
+
+    }
+
+    public static WKDataverseConnection GetWKDataverseConnectionFromConnectionString(WKAppHost wkAppHost, WKDataverseConnectionString wkDataverseConnectionString, ILogger? logger = default) {
+        if (wkDataverseConnectionString is null) { throw new ArgumentNullException(nameof(wkDataverseConnectionString)); }
+
+        if (wkDataverseConnectionString.ConnectionString is { Length: > 0 } connectionString) {
+            logger ??= wkAppHost.GetHost().Services.GetRequiredService<ILoggerFactory>()
+                .CreateLogger(wkDataverseConnectionString.Name.GetValueOrDefault("Dataverse"));
+            ServiceClient serviceClient = new ServiceClient(connectionString, logger);
+            return new WKDataverseConnection(serviceClient, wkAppHost);
+        }
+
+        {
+            if (logger is not null) {
+                wkDataverseConnectionString.Logger = logger;
+            } else if (wkDataverseConnectionString.Logger is null) {
+                wkDataverseConnectionString.Logger = wkAppHost.GetHost().Services.GetRequiredService<ILoggerFactory>()
+                    .CreateLogger(wkDataverseConnectionString.Name.GetValueOrDefault("Dataverse"));
+            }
+            ServiceClient serviceClient = new ServiceClient(wkDataverseConnectionString);
+            return new WKDataverseConnection(serviceClient, wkAppHost);
+        }
+    }
+
     internal WKDataverseConnection(ServiceClient serviceClient, WKAppHost wkAppHost) {
         this.ServiceClient = serviceClient;
         this.WKAppHost = wkAppHost;

@@ -64,3 +64,445 @@
 ---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
 
 
+[Update-MarkdownHelpModule] 05/22/2024 15:27:05 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/22/2024 15:27:05 [Update-MarkdownHelpModule]22.05.2024 15:27:05
+[Update-MarkdownHelpModule] 05/22/2024 15:27:05 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Added: ApplyHostConfiguration
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/22/2024 17:45:16 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/22/2024 17:45:16 [Update-MarkdownHelpModule]22.05.2024 17:45:16
+[Update-MarkdownHelpModule] 05/22/2024 17:45:16 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/22/2024 17:45:17 Creating new markdown for command 'New-WKDataverseConnection'
+[Update-MarkdownHelpModule] 05/22/2024 17:45:17 Creating new markdown for command 'New-WKDataverseConnectionString'
+[Update-MarkdownHelpModule] 05/23/2024 04:48:02 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/23/2024 04:48:02 [Update-MarkdownHelpModule]23.05.2024 04:48:02
+[Update-MarkdownHelpModule] 05/23/2024 04:48:02 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnection ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/23/2024 04:54:28 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/23/2024 04:54:28 [Update-MarkdownHelpModule]23.05.2024 04:54:28
+[Update-MarkdownHelpModule] 05/23/2024 04:54:28 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnection ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/23/2024 04:55:48 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/23/2024 04:55:48 [Update-MarkdownHelpModule]23.05.2024 04:55:48
+[Update-MarkdownHelpModule] 05/23/2024 04:55:48 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnection ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/23/2024 05:42:06 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/23/2024 05:42:06 [Update-MarkdownHelpModule]23.05.2024 05:42:06
+[Update-MarkdownHelpModule] 05/23/2024 05:42:06 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnection ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/23/2024 05:42:07 Creating new markdown for command 'New-WKOrganizationRequest'
+[Update-MarkdownHelpModule] 05/23/2024 05:46:18 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/23/2024 05:46:18 [Update-MarkdownHelpModule]23.05.2024 05:46:18
+[Update-MarkdownHelpModule] 05/23/2024 05:46:18 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnection ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+
+---- UPDATING Cmdlet : New-WKOrganizationRequest ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Added: ProgressAction
+
+	Parameter Updated: OrganizationRequestKind
+		Type updated from  to WKOrganizationRequestKind
+
+	Parameter Updated: OrganizationRequestKind
+		Required updated from False to True
+
+	Parameter Updated: OrganizationRequestKind
+		Accepts Pipeline Input updated from false to False
+
+---- COMPLETED UPDATING Cmdlet : New-WKOrganizationRequest ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/23/2024 14:40:09 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/23/2024 14:40:09 [Update-MarkdownHelpModule]23.05.2024 14:40:09
+[Update-MarkdownHelpModule] 05/23/2024 14:40:09 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnection ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+
+---- UPDATING Cmdlet : New-WKOrganizationRequest ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Added: ProgressAction
+
+	Parameter Updated: OrganizationRequestKind
+		Type updated from  to WKOrganizationRequestKind
+
+	Parameter Updated: OrganizationRequestKind
+		Required updated from False to True
+
+	Parameter Updated: OrganizationRequestKind
+		Accepts Pipeline Input updated from false to False
+
+---- COMPLETED UPDATING Cmdlet : New-WKOrganizationRequest ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+
+[Update-MarkdownHelpModule] 05/23/2024 14:40:14 Creating new markdown for command 'ConvertFrom-WKDatatable'
+[Update-MarkdownHelpModule] 05/23/2024 14:40:14 Creating new markdown for command 'Export-WKSolution'
+[Update-MarkdownHelpModule] 05/23/2024 15:11:09 Determined module name for 'helpmd' as 'Brimborium.Werkzeugkasten'.
+[Update-MarkdownHelpModule] 05/23/2024 15:11:09 [Update-MarkdownHelpModule]23.05.2024 15:11:09
+[Update-MarkdownHelpModule] 05/23/2024 15:11:09 Updating documents for module 'Brimborium.Werkzeugkasten' in helpmd
+---- UPDATING Cmdlet : ConvertFrom-WKDatatable ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : ConvertFrom-WKDatatable ----
+
+
+---- UPDATING Cmdlet : Export-WKSolution ----
+
+	Parameter Set Added: Content
+
+---- COMPLETED UPDATING Cmdlet : Export-WKSolution ----
+
+
+---- UPDATING Cmdlet : Get-WKLogger ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-WKLogger ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnection ----
+
+
+---- UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-WKDataverseConnectionString ----
+
+
+---- UPDATING Cmdlet : New-WKOrganizationRequest ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Added: ProgressAction
+
+	Parameter Updated: OrganizationRequestKind
+		Type updated from  to WKOrganizationRequestKind
+
+	Parameter Updated: OrganizationRequestKind
+		Required updated from False to True
+
+	Parameter Updated: OrganizationRequestKind
+		Accepts Pipeline Input updated from false to False
+
+---- COMPLETED UPDATING Cmdlet : New-WKOrganizationRequest ----
+
+
+---- UPDATING Cmdlet : New-WKPSAppHost ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-WKPSAppHost ----
+
+

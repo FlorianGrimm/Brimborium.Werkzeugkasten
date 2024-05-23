@@ -1,12 +1,13 @@
-﻿
-namespace Brimborium.Werkzeugkasten;
+﻿namespace Brimborium.Werkzeugkasten;
 
 public class WKDataverseConnectionString : Microsoft.PowerPlatform.Dataverse.Client.Model.ConnectionOptions {
     public string? Name { get; set; }
 
     public string? ConnectionString { get; set; }
 
-    public void Bind(IConfiguration configuration) { 
+    public string? ClientSecretEncrypted { get; set; }
+
+    public void Bind(IConfiguration configuration) {
         if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.ConnectionString), default) is { } connectionString) {
             this.ConnectionString = connectionString;
         }
@@ -20,84 +21,48 @@ public class WKDataverseConnectionString : Microsoft.PowerPlatform.Dataverse.Cli
             this.UserName = userName;
         }
         if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.Password), default) is { } password) {
-            System.Security.SecureString secureString =new();
+            System.Security.SecureString secureString = new();
             //TODO: secureString
             //this.Password = userName;
         }
-#if false
-    public string UserName { get; set; }
-
-    //
-    // Summary:
-    //     User Password to use - Used with Interactive Login scenarios
-    public SecureString Password { get; set; }
-
-    //
-    // Summary:
-    //     User Domain to use - Use with Interactive Login for On Premises
-    public string Domain { get; set; }
-
-    //
-    // Summary:
-    //     Home Realm to use when working with AD Federation.
-    public Uri HomeRealmUri { get; set; }
-
-    //
-    // Summary:
-    //     Require a unique instance of the Dataverse ServiceClient per Login.
-    public bool RequireNewInstance { get; set; } = true;
-
-
-    //
-    // Summary:
-    //     Client \ Application ID to be used when logging into Dataverse.
-    public string ClientId { get; set; } = DataverseConnectionStringProcessor.sampleClientId;
-
-
-    //
-    // Summary:
-    //     Client Secret Id to use to login to Dataverse
-    public string ClientSecret { get; set; }
-
-    //
-    // Summary:
-    //     Redirect Uri to use when connecting to dataverse. Required for OAuth Authentication.
-    public Uri RedirectUri { get; set; } = new Uri(DataverseConnectionStringProcessor.sampleRedirectUrl);
-
-
-    //
-    // Summary:
-    //     Path and FileName for MSAL Token Cache. Used only for OAuth - User Interactive
-    //     flows.
-    public string TokenCacheStorePath { get; set; }
-
-    //
-    // Summary:
-    //     Type of Login prompt to use.
-    public PromptBehavior? LoginPrompt { get; set; }
-
-    //
-    // Summary:
-    //     Certificate ThumbPrint to use to lookup machine certificate to use for authentication.
-    public string CertificateThumbprint { get; set; }
-
-    //
-    // Summary:
-    //     Certificate store name to look up thumbprint. System.Security.Cryptography.X509Certificates.StoreName
-    public StoreName CertificateStoreName { get; set; }
-
-    //
-    // Summary:
-    //     Skip discovery leg when connecting to Dataverse
-    public bool SkipDiscovery { get; set; } = true;
-
-
-    //
-    // Summary:
-    //     (Windows Only) If True, Uses the current user of windows to attempt the login
-    //     with
-    public bool UseCurrentUserForLogin { get; set; }
-
-#endif
+        if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.Domain), default) is { } domain) {
+            this.Domain = domain;
+        }
+        if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.HomeRealmUri), default) is { } homeRealmUri) {
+            this.HomeRealmUri = new Uri(homeRealmUri, UriKind.Absolute);
+        }
+        if (configuration.GetValue<bool?>(nameof(WKDataverseConnectionString.RequireNewInstance), default) is { } requireNewInstance) {
+            this.RequireNewInstance = requireNewInstance;
+        }
+        if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.ClientId), default) is { } clientId) {
+            this.ClientId = clientId;
+        }
+        if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.ClientSecretEncrypted), default) is { } clientSecretEncrypted) {
+            // TODO: unit test
+            this.ClientSecret = WKUtility.Unprotect(clientSecretEncrypted).AsString();
+        } else if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.ClientSecret), default) is { } clientSecret) {
+            this.ClientSecret = clientSecret;
+        }
+        if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.RedirectUri), default) is { } redirectUri) {
+            this.RedirectUri = new Uri(redirectUri, UriKind.Absolute);
+        }
+        if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.TokenCacheStorePath), default) is { } tokenCacheStorePath) {
+            this.TokenCacheStorePath = tokenCacheStorePath;
+        }
+        if (configuration.GetValue<PromptBehavior?>(nameof(WKDataverseConnectionString.LoginPrompt), default) is { } loginPrompt) {
+            this.LoginPrompt = loginPrompt;
+        }
+        if (configuration.GetValue<string?>(nameof(WKDataverseConnectionString.CertificateThumbprint), default) is { } certificateThumbprint) {
+            this.CertificateThumbprint = certificateThumbprint;
+        }
+        if (configuration.GetValue<System.Security.Cryptography.X509Certificates.StoreName?>(nameof(WKDataverseConnectionString.CertificateStoreName), default) is { } certificateStoreName) {
+            this.CertificateStoreName = certificateStoreName;
+        }
+        if (configuration.GetValue<bool?>(nameof(WKDataverseConnectionString.SkipDiscovery), default) is { } skipDiscovery) {
+            this.SkipDiscovery = skipDiscovery;
+        }
+        if (configuration.GetValue<bool?>(nameof(WKDataverseConnectionString.UseCurrentUserForLogin), default) is { } useCurrentUserForLogin) {
+            this.UseCurrentUserForLogin = useCurrentUserForLogin;
+        }
     }
 }

@@ -5,68 +5,91 @@ online version:
 schema: 2.0.0
 ---
 
-# New-WKPSAppHost
+# Export-WKSolution
 
 ## SYNOPSIS
-Creates a new instance of the WKPSAppHost, which contains configuration for logging.
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
+### Content (Default)
 ```
-New-WKPSAppHost [[-ApplicationName] <String>] [[-ContentRootPath] <String>] [[-AppSettingsJsonPath] <String>]
- [-ApplyHostConfiguration] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Export-WKSolution [-Connection] <WKDataverseConnection> [-SolutionName] <String> [[-Managed] <Boolean>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
+```
+
+### Folder
+```
+Export-WKSolution [-Connection] <WKDataverseConnection> [-SolutionName] <String> [[-Managed] <Boolean>]
+ [[-Folder] <String>] [[-FileName] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a new instance of the WKPSAppHost, which contains configuration for logging.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $AppHost = New-WKPSAppHost -ApplicationName 'MyPowershell' -AppSettingsJsonPath 'appsettings.json'
+PS C:\> {{ Add example code here }}
 ```
 
-Creates a new instance of the WKPSAppHost with the specified application name and appsettings.json path.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -ApplicationName
-The ApplicationName.
+### -Connection
+Connection to access Dataverse.
 
 ```yaml
-Type: String
+Type: WKDataverseConnection
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplyHostConfiguration
-{{ Fill ApplyHostConfiguration Description }}
+### -FileName
+the export fileName: '{SolutionName}-{Now}.zip' used if not set.
+'{SolutionName}' is replaced by the SolutionName. '{Now}' is replaced by the current DateTime 'yyyy-MM-dd-HH-mm-ss'. '{Today}' is replaced by the current Date 'yyyy-MM-dd'.
+
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Folder
 Aliases:
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppSettingsJsonPath
-Loads the configuration from the specified appsettings.json file. -AppSettingsJsonPath is optional. If not set, the appsettings.json file in the ContentRootPath is used.
-if the file exists the configuration "Host" is used to configure the host.
+### -Folder
+The export folder.
 
 ```yaml
 Type: String
+Parameter Sets: Folder
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Managed
+Export Managed Solution.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -77,23 +100,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContentRootPath
-Set the root path of the content, if not set, the current directory is used. This is used to resolve relative paths.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ProgressAction
-Not used.
+{{ Fill ProgressAction Description }}
 
 ```yaml
 Type: ActionPreference
@@ -107,6 +115,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SolutionName
+{{ Fill SolutionName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -115,7 +138,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 ## OUTPUTS
 
-### Brimborium.Werkzeugkasten.WKPSAppHost
+### System.Byte[]
+### System.Byte[]
 ## NOTES
 
 ## RELATED LINKS

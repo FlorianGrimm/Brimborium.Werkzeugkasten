@@ -5,87 +5,87 @@ online version:
 schema: 2.0.0
 ---
 
-# New-WKPSAppHost
+# ConvertFrom-WKDatatable
 
 ## SYNOPSIS
-Creates a new instance of the WKPSAppHost, which contains configuration for logging.
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
 ```
-New-WKPSAppHost [[-ApplicationName] <String>] [[-ContentRootPath] <String>] [[-AppSettingsJsonPath] <String>]
- [-ApplyHostConfiguration] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+ConvertFrom-WKDatatable [-InputDataTable] <DataTable> [-OutputCollection] <EntityCollection>
+ [-MetaEntity] <WKMetaEntity> [[-MappingEntity] <WKMappingEntity>] [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a new instance of the WKPSAppHost, which contains configuration for logging.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $AppHost = New-WKPSAppHost -ApplicationName 'MyPowershell' -AppSettingsJsonPath 'appsettings.json'
+PS C:\> {{ Add example code here }}
 ```
 
-Creates a new instance of the WKPSAppHost with the specified application name and appsettings.json path.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -ApplicationName
-The ApplicationName.
+### -InputDataTable
+{{ Fill InputDataTable Description }}
 
 ```yaml
-Type: String
+Type: DataTable
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplyHostConfiguration
-{{ Fill ApplyHostConfiguration Description }}
+### -MappingEntity
+{{ Fill MappingEntity Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: WKMappingEntity
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppSettingsJsonPath
-Loads the configuration from the specified appsettings.json file. -AppSettingsJsonPath is optional. If not set, the appsettings.json file in the ContentRootPath is used.
-if the file exists the configuration "Host" is used to configure the host.
+### -MetaEntity
+{{ Fill MetaEntity Description }}
 
 ```yaml
-Type: String
+Type: WKMetaEntity
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContentRootPath
-Set the root path of the content, if not set, the current directory is used. This is used to resolve relative paths.
+### -OutputCollection
+{{ Fill OutputCollection Description }}
 
 ```yaml
-Type: String
+Type: EntityCollection
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
-Not used.
+{{ Fill ProgressAction Description }}
 
 ```yaml
 Type: ActionPreference
@@ -115,7 +115,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 ## OUTPUTS
 
-### Brimborium.Werkzeugkasten.WKPSAppHost
+### Microsoft.Xrm.Sdk.EntityCollection
 ## NOTES
 
 ## RELATED LINKS
